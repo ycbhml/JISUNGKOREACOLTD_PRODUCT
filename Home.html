@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지성코리아</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加Google Maps的API脚本 -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVOgBo9mar82tVUgbiU0zlCCn5TeyXGmw&callback=initMap"></script>
+</head>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header>
+        <div class="daohanglan">
+            <div class="logo">
+                <img src="logo\logo7.png" alt="zhichengkorea Logo">
+            </div>
+
+            <!-- 导航栏 -->
+            <nav>
+                <ul>
+                    <li><a href="sub01.php">지성코리아소개</a></li>    
+                    <li><a href="sub02.php">제품소개</a></li>
+                    <li><a href="sub04.php">연락처&주문</a></li>
+                    <li><a href="sub05.php">오시는 길</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 主内容部分 -->
+    <main>
+        <!-- 横幅内容部分 -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="hengfu\z1.jpg" alt="xuanchaun1" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu\z2.jpg" alt="xuanchaun2" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu\z3.jpg" alt="xuanchaun3" style="width:100%">
+            </div>
+            <!-- 上一个下一个按钮 -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- 点和圆 -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+
+        <!-- 侧边栏联系内容部分 -->
+        <div class="sidebar">
+            <div class="sidebar-item" onmouseover="showPopup('phone-popup')" onmouseout="hidePopup('phone-popup')">
+                <div class="icon">
+                    <img src="tubiao\phone.png" style="width:100%">
+                </div> <!-- 电话图标 -->
+                <div id="phone-popup" class="popup">
+                    <p>phone number</p>
+                    <p>010-5053-2308</p>
+                    <p>오전8시~오후18시</p>
+                </div>
+            </div>
+            <div class="sidebar-item" onmouseover="showPopup('kakaotalk-popup')" onmouseout="hidePopup('kakaotalk-popup')">
+                <div class="icon">
+                    <img src="tubiao\kt.png" style="width:100%">
+                </div> <!-- kakaotalk图标 -->
+                <div id="kakaotalk-popup" class="popup">
+                    <img src="qita\kakaoma.jpg" style="width:100%">
+                    <p>장민</p>
+                    <p>KakaoTalk</p>
+                </div>
+            </div>
+            <div class="sidebar-item" onmouseover="showPopup('Email-popup')" onmouseout="hidePopup('Email-popup')">
+                <div class="icon">
+                    <img src="tubiao\Email.png" style="width:100%">
+                </div> <!-- Email图标 -->
+                <div id="Email-popup" class="popup">
+                    <p>Email</p>
+                    <p>jisungkoreacoltd@hotmail.com</p>
+                </div>
+            </div>
+            <!-- 其他项目可以按照相同的结构添加 -->
+        </div>
+
+        <!-- 公司内容介绍部分 -->
+        <div class="introduce">
+            <p>지성코리아소개</p>
+        </div>
+        
+        <!-- 产品介绍部分 -->
+        <div class="product_description">
+            <div class="chanpinjieshao">
+                <p>제품소개</p>
+            </div>
+            <div class="product-container">
+                <div class="product-item">
+                    <img src="chanpin\dongman.jpg" alt="dongman.jpg">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">중국산 내동장어 1kg </p>
+                    <p class="price">27,900원</p>
+                    <p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>
+                </div>
+                <div class="product-item">
+                    <img src="chanpin\xianman.jpg" alt="xianman.jpg">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">중국산 생장어 1kg</p>
+                    <p class="price">14,000원</p>
+                    <p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>
+                </div>
+                <div class="product-item">
+                    <img src="chanpin\huoman.png" alt="huoman.jpg">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">중국산 장어 1kg </p>
+                    <p class="price">60000원</p>
+                    <p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>
+                </div>
+                <div class="product-item">
+                    <img src="chanpin\shengjiang.jpg" alt="dongman.jpg">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">중국산 생강 1kg </p>
+                    <p class="price">1000</p>
+                    <p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 地图部分 -->
+        <div class="road">
+            <p>오시는 길</p>
+            <p>경희도 평택시 서동대로 422 신영보세창고B동</p>
+            <div id="map" style="width: 90%;height: 500px;"></div>
+        </div>
+    </main>
+
+    <!-- 底部部分 -->
+    <footer>
+        <div class="dibu">
+            <p>&copy; 2024지성코리아</p>
+            <p>법인명: 지성코리아 | 대표자: 요지성 | 사업자 등록번호: xxxxxxxx [사업자정보확인]</p>
+            <p>전화: 010-5053-2308 | 팩스: 010-5053-2308 | 주소: 경희도 평택시 서동대로 422 신영보세창고B동</p>
+            <p>개인정보관리책임자: 요지성(jisungkoreacoltd@hotmail.com) | Contact: jisungkoreacoltd@hotmail.com for more information</p>
+            <p>Copyright © 지성코리아 All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        function initMap() {
+            // 初始化Google Map
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 36.93986, lng: 126.8864}, // 地图中心坐标
+                zoom: 15 // 地图缩放级别
+            });
+
+            // 添加标记
+            var marker = new google.maps.Marker({
+                position: {lat: 36.93986, lng: 126.8864},
+                map: map,
+                title: '지성코리아'
+            });
+        }
+    </script>
+</body>
+</html>
