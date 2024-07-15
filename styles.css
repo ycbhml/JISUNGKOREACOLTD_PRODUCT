@@ -1,0 +1,384 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif; /* 设置全局字体为Arial，如果Arial不可用则使用sans-serif */
+    margin: 0; /* 移除页面的默认外边距 */
+    padding: 0; /* 移除页面的默认内边距 */
+}
+.daohanglan {
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    padding: 10px 0; /* 设置上下内边距 */
+    width: 100%; /* 设置导航栏宽度为页面宽度的100% */
+    margin: 0 auto; /* 设置导航栏居中对齐 */
+}
+
+/* 头部样式 */
+header {
+    background-color: #ffffff; /* 设置头部背景颜色为白色 */
+    color: #000000; /* 设置头部文字颜色为黑色 */
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 使头部内容水平居中 */
+    align-items: center; /* 使头部内容垂直居中 */
+    padding: 10px 0; /* 设置头部上下内边距为10px */
+}
+header .logo {
+    flex-shrink: 0; /* 防止Logo缩小 */
+    margin-right: 20px;
+}
+header .logo img {
+    height: 100px; /* 设置Logo图片的高度 */
+}
+header nav {
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+header nav ul {
+    list-style: none; /* 移除导航栏无序列表的默认列表样式 */
+    padding: 0; /* 移除导航栏无序列表的内边距 */
+    margin: 0;
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+header nav ul li {
+    margin-right: 50px; /* 设置每个列表项右边距 */
+}
+header nav ul li:last-child {
+    margin-right: 0; /* 去除最后一个元素的右边距 */
+}
+header nav ul li a {
+    color: #000000; /* 设置导航链接文字颜色为黑色 */
+    text-decoration: none; /* 移除导航链接的默认下划线 */
+    font-size: 20px; /* 设置导航链接的字体大小 */
+    font-weight: bold; /* 设置导航链接的字体加粗 */
+}
+
+/* 幻灯片样式 */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.mySlides {
+    display: none;
+    width: 100%;
+}
+.mySlides img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/* 主页横幅上一张下一张按钮 */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* 悬停时，添加带有一点透明的黑色背景色 */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* 点和圆 */
+.dots-container {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* 淡入淡出动画 */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* 侧边栏 */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    z-index: 1000; /* 将侧边栏置于最上层 */
+}
+.sidebar-item {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sidebar-item p {
+    margin: 0; /* 移除段落的默认外边距 */
+}
+.icon {
+    font-size: 20px;
+}
+.popup {
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.sidebar-item:hover .popup {
+    display: block;
+}
+main .icon img {
+    height: 50px; /* 设置Logo图片的高度 */
+}
+
+
+/* 公司介绍 */
+.introduce {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.introduce p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 产品介绍 */
+.product_description {
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 水平居中 */
+    height: 100%; /* 确保容器高度适合内容 */
+    background-image: url('qita/background.png'); /* 确保路径正确 */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333; /* 根据需要调整文本颜色 */
+    font-family: Arial, sans-serif;
+    width: 100%; /* 设置宽度为100% */
+    margin: 0; /* 去掉外边距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chanpinjieshao {
+    font-size: 30px;
+    text-align: center; /* 使内部文本也居中 */
+    font-weight: bold;
+    margin-bottom: 20px; /* 添加一些底部间距 */
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: space-between; /* 在行内均匀分布 */
+    width: 100%; /* 使容器宽度充满可用空间 */
+    max-width: 1200px; /* 设置最大宽度以限制容器宽度 */
+    margin: 0 auto; /* 使容器居中 */
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 每个产品项宽度为33.33%减去一些间距 */
+    box-sizing: border-box; /* 确保填充和边框不会增加元素的宽度 */
+    margin-bottom: 20px; /* 在每个产品项底部添加一些间距 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.labels {
+    margin-bottom: 10px;
+}
+
+.labels .recommend,
+.labels .new {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.labels .recommend {
+    background-color: #f56342;
+}
+
+.labels .new {
+    background-color: #ffcc00;
+}
+
+.description {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 20px;
+    color: #e60012;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.shipping {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+/* 地图 */
+.road {
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
+    background-color: #ffffff;
+    margin-top: 20px; /* 添加顶部间距 */
+}
+.road p {
+    font-size: 24px; /* 根据需要调整字体大小 */
+    font-weight: bold;
+    margin-bottom: 20px; /* 添加一些底部间距 */
+}
+
+#map-container {
+    max-width: 800px; /* 设置最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+}
+
+#map {
+    width: 50%;
+    height: 600px;
+}
+
+
+/* 底部样式 */
+footer {
+    background-color: #000000; /* 设置底部背景颜色为黑色 */
+    color: #fff; /* 设置底部文字颜色为白色 */
+    text-align: center; /* 设置底部文字居中对齐 */
+    padding: 10px 0; /* 设置底部上下内边距为10px */
+    position: relative; /* 将底部位置设置为相对定位 */
+    bottom: 0; /* 将底部固定在页面的底部 */
+    width: 100%; /* 设置底部宽度为100%，覆盖整个页面宽度 */
+}
+
+
+
+
+
+
+
+
+
+/* test */
+.daohanglan {
+    border: 2px solid #ff0000; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.logo {
+    border: 2px solid #00ff62; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.slideshow-container {
+    border: 2px solid #3700ff; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.dots-container {
+    border: 2px solid #00ccff; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.dibu {
+    border: 2px solid #ff00c8; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.sidebar{
+    border: 2px solid #e100ff; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.introduce {
+    border: 2px solid #475739; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.introduce_zuoyou{
+    border: 2px solid #776a72; /* 设置边框颜色和宽度 */
+}
+.product_description {
+    border: 2px solid #d8bbfa; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.chanpinjieshao{
+    border: 2px solid #d7eb90; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.product-container{
+    border: 2px solid #660000; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
+.road {
+    border: 2px solid #c1f0ec; /* 设置边框颜色和宽度 */
+    padding: 2px; /* 添加内边距 */
+}
