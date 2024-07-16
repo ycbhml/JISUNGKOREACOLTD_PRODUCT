@@ -377,7 +377,7 @@ body.mobile .daohanglan {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    padding: 5px 0; /* 减少填充 */
     width: 100%;
     margin: 0 auto;
 }
@@ -388,16 +388,16 @@ body.mobile header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0; /* 减少填充 */
 }
 
 body.mobile header .logo {
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 10px; /* 减少间距 */
 }
 
 body.mobile header .logo img {
-    height: 60px;
+    height: 50px; /* 减少高度 */
 }
 
 body.mobile header nav {
@@ -414,7 +414,7 @@ body.mobile header nav ul {
 }
 
 body.mobile header nav ul li {
-    margin-right: 50px;
+    margin-right: 20px; /* 减少间距 */
 }
 
 body.mobile header nav ul li:last-child {
@@ -454,7 +454,7 @@ body.mobile .next {
     top: 50%;
     transform: translateY(-50%);
     width: auto;
-    padding: 16px;
+    padding: 10px; /* 减少填充 */
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -539,7 +539,7 @@ body.mobile .sidebar {
     padding: 5px; /* 减少填充 */
     border-radius: 10px 0 0 10px;
     z-index: 1000;
-    width: 40px; /* 调整宽度 */
+    width: 30px; /* 减小宽度 */
     height: auto; /* 自动高度 */
 }
 
@@ -583,7 +583,7 @@ body.mobile .sidebar-item:hover .popup {
 }
 
 body.mobile main .icon img {
-    height: 50px;
+    height: 40px; /* 减少高度 */
 }
 
 /* 公司介绍 */
@@ -596,7 +596,7 @@ body.mobile .introduce {
 }
 
 body.mobile .introduce p {
-    font-size: 30px;
+    font-size: 24px; /* 调整字体大小 */
     font-weight: bold;
 }
 
@@ -608,7 +608,7 @@ body.mobile .product_description {
     height: 100%;
     background-size: cover;
     background-position: center;
-    padding: 20px;
+    padding: 10px; /* 减少填充 */
     border-radius: 10px;
     color: #333;
     font-family: Arial, sans-serif;
@@ -618,10 +618,10 @@ body.mobile .product_description {
 }
 
 body.mobile .chanpinjieshao {
-    font-size: 30px;
+    font-size: 24px; /* 调整字体大小 */
     text-align: center;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* 减少间距 */
 }
 
 body.mobile .product-container {
@@ -637,10 +637,10 @@ body.mobile .product-item {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 20px;
-    width: calc(50% - 10px);
+    padding: 10px; /* 减少填充 */
+    width: calc(50% - 10px); /* 调整宽度 */
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* 减少间距 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -648,8 +648,8 @@ body.mobile .product-item img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 10px; /* 减少填充 */
+    margin-bottom: 10px; /* 减少间距 */
 }
 
 body.mobile .labels {
@@ -675,20 +675,20 @@ body.mobile .labels .new {
 }
 
 body.mobile .description {
-    font-size: 16px;
+    font-size: 14px; /* 减少字体大小 */
     color: #333;
     margin: 10px 0;
 }
 
 body.mobile .price {
-    font-size: 20px;
+    font-size: 18px; /* 减少字体大小 */
     color: #e60012;
     margin: 10px 0;
     font-weight: bold;
 }
 
 body.mobile .shipping {
-    font-size: 14px;
+    font-size: 12px; /* 减少字体大小 */
     color: #666;
     line-height: 1.5;
 }
@@ -729,7 +729,6 @@ body.mobile footer {
     bottom: 0;
     width: 100%;
 }
-
 
 
 
