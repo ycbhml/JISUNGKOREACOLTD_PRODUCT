@@ -232,29 +232,6 @@ body.desktop .introduce p {
 }
 
 /* 产品介绍 背景板 */
-body.desktop .product_description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    border-radius: 10px;
-    color: #333;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-body.desktop .chanpinjieshao {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 body.desktop .product-container {
     display: flex;
     flex-wrap: wrap;
