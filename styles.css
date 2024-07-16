@@ -193,13 +193,13 @@ main .icon img {
     font-weight: bold;
 }
 
-/* 产品介绍 */
+/* 产品介绍 背景板*/
 .product_description {
     display: flex;
     flex-direction: column; /* 垂直排列子元素 */
     align-items: center; /* 水平居中 */
     height: 100%; /* 确保容器高度适合内容 */
-    background-image: url('qita/background.png'); /* 确保路径正确 */
+    /*background-image: url('qita/background.png'); /* 确保路径正确 */
     background-size: cover;
     background-position: center;
     padding: 20px;
