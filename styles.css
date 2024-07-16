@@ -338,15 +338,30 @@ body.desktop footer {
     width: 100%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 手机设备的样式 */
 body.mobile .daohanglan {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 0; /* 减少填充 */
+    padding: 10px 0;
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 body.mobile header {
@@ -355,18 +370,17 @@ body.mobile header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 0; /* 减少填充 */
+    padding: 10px 0;
     width: 100%;
-    box-sizing: border-box;
 }
 
 body.mobile header .logo {
     flex-shrink: 0;
-    margin-right: 10px; /* 减少间距 */
+    margin-right: 20px;
 }
 
 body.mobile header .logo img {
-    height: 50px; /* 减少高度 */
+    height: 100px;
 }
 
 body.mobile header nav {
@@ -383,7 +397,7 @@ body.mobile header nav ul {
 }
 
 body.mobile header nav ul li {
-    margin-right: 20px; /* 减少间距 */
+    margin-right: 50px;
 }
 
 body.mobile header nav ul li:last-child {
@@ -393,7 +407,7 @@ body.mobile header nav ul li:last-child {
 body.mobile header nav ul li a {
     color: #000000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -401,9 +415,8 @@ body.mobile header nav ul li a {
 body.mobile .slideshow-container {
     position: relative;
     max-width: 100%;
-    margin: 0 auto;
+    margin: auto;
     overflow: hidden;
-    box-sizing: border-box;
 }
 
 body.mobile .mySlides {
@@ -412,8 +425,8 @@ body.mobile .mySlides {
 }
 
 body.mobile .mySlides img {
+    vertical-align: middle;
     width: 100%;
-    display: block;
 }
 
 /* 主页横幅上一张下一张按钮 */
@@ -424,10 +437,10 @@ body.mobile .next {
     top: 50%;
     transform: translateY(-50%);
     width: auto;
-    padding: 10px; /* 减少填充 */
+    padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -506,17 +519,14 @@ body.mobile .sidebar {
     right: 0;
     transform: translateY(-50%);
     background-color: #ffffff;
-    padding: 5px; /* 减少填充 */
+    padding: 10px;
     border-radius: 10px 0 0 10px;
     z-index: 1000;
-    width: 30px; /* 减小宽度 */
-    height: auto; /* 自动高度 */
-    box-sizing: border-box;
 }
 
-/* 调整侧边栏内部元素的样式 */
 body.mobile .sidebar-item {
-    padding: 5px; /* 减少填充 */
+    position: relative;
+    padding: 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -525,14 +535,12 @@ body.mobile .sidebar-item {
     text-align: center;
 }
 
-body.mobile .sidebar-item img {
-    width: 20px; /* 调整图标大小 */
-    height: 20px;
-}
-
 body.mobile .sidebar-item p {
     margin: 0;
-    font-size: 12px; /* 调整字体大小 */
+}
+
+body.mobile .icon {
+    font-size: 20px;
 }
 
 body.mobile .popup {
@@ -542,11 +550,10 @@ body.mobile .popup {
     top: 50%;
     transform: translateY(-50%);
     background-color: #ffffff;
-    padding: 5px; /* 减少填充 */
+    padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 5px;
     white-space: nowrap;
-    font-size: 12px; /* 调整字体大小 */
 }
 
 body.mobile .sidebar-item:hover .popup {
@@ -554,7 +561,7 @@ body.mobile .sidebar-item:hover .popup {
 }
 
 body.mobile main .icon img {
-    height: 40px; /* 减少高度 */
+    height: 50px;
 }
 
 /* 公司介绍 */
@@ -567,34 +574,11 @@ body.mobile .introduce {
 }
 
 body.mobile .introduce p {
-    font-size: 24px; /* 调整字体大小 */
+    font-size: 30px;
     font-weight: bold;
 }
 
 /* 产品介绍 背景板 */
-body.mobile .product_description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    padding: 10px; /* 减少填充 */
-    border-radius: 10px;
-    color: #333;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-body.mobile .chanpinjieshao {
-    font-size: 24px; /* 调整字体大小 */
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px; /* 减少间距 */
-}
-
 body.mobile .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -608,10 +592,10 @@ body.mobile .product-item {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px; /* 减少填充 */
-    width: calc(50% - 10px); /* 调整宽度 */
+    padding: 20px;
+    width: calc(33.33% - 20px);
     box-sizing: border-box;
-    margin-bottom: 10px; /* 减少间距 */
+    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -619,8 +603,8 @@ body.mobile .product-item img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 10px; /* 减少填充 */
-    margin-bottom: 10px; /* 减少间距 */
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 body.mobile .labels {
@@ -646,20 +630,20 @@ body.mobile .labels .new {
 }
 
 body.mobile .description {
-    font-size: 14px; /* 减少字体大小 */
+    font-size: 16px;
     color: #333;
     margin: 10px 0;
 }
 
 body.mobile .price {
-    font-size: 18px; /* 减少字体大小 */
+    font-size: 20px;
     color: #e60012;
     margin: 10px 0;
     font-weight: bold;
 }
 
 body.mobile .shipping {
-    font-size: 12px; /* 减少字体大小 */
+    font-size: 14px;
     color: #666;
     line-height: 1.5;
 }
@@ -686,8 +670,8 @@ body.mobile #map-container {
 }
 
 body.mobile #map {
-    width: 100%;
-    height: 300px;
+    width: 50%;
+    height: 600px;
 }
 
 /* 底部样式 */
@@ -700,6 +684,22 @@ body.mobile footer {
     bottom: 0;
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* test */
 .daohanglan {
