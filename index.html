@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="styles.css">
     <!-- 添加Google Maps的API脚本 -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVOgBo9mar82tVUgbiU0zlCCn5TeyXGmw&callback=initMap"></script>
-</head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function isMobileDevice() {
+                return (window.innerWidth <= 768);
+            }
+
+            if (isMobileDevice()) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        });
+    </script>
 </head>
 
 <body>
     
-    <!-- 头部部分 
+    <!-- 头部部分 -->
     <header>
-        <div class="daohanglan">
+        <!--<div class="daohanglan">
             <div class="logo">
-                <img src="logo\logo7.png" alt="zhichengkorea Logo">
+                <img src="logo/logo7.png" alt="zhichengkorea Logo">
             </div>
             <nav>
                 <ul>
@@ -26,22 +38,21 @@
                     <li><a href="sub05.php">오시는 길</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>-->
-
+        </div>-->
+    </header>
 
     <!-- 主内容部分 -->
     <main>
         <!-- 横幅内容部分 -->
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="hengfu\z1.jpg" alt="xuanchaun1" style="width:100%">
+                <img src="hengfu/z1.jpg" alt="xuanchaun1" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="hengfu\z2.jpg" alt="xuanchaun2" style="width:100%">
+                <img src="hengfu/z2.jpg" alt="xuanchaun2" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="hengfu\z3.jpg" alt="xuanchaun3" style="width:100%">
+                <img src="hengfu/z3.jpg" alt="xuanchaun3" style="width:100%">
             </div>
             <!-- 上一个下一个按钮 -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -59,7 +70,7 @@
         <div class="sidebar">
             <div class="sidebar-item" onmouseover="showPopup('phone-popup')" onmouseout="hidePopup('phone-popup')">
                 <div class="icon">
-                    <img src="tubiao\phone.png" style="width:100%">
+                    <img src="tubiao/phone.png" style="width:100%">
                 </div> <!-- 电话图标 -->
                 <div id="phone-popup" class="popup">
                     <p>phone number</p>
@@ -69,17 +80,17 @@
             </div>
             <div class="sidebar-item" onmouseover="showPopup('kakaotalk-popup')" onmouseout="hidePopup('kakaotalk-popup')">
                 <div class="icon">
-                    <img src="tubiao\kt.png" style="width:100%">
+                    <img src="tubiao/kt.png" style="width:100%">
                 </div> <!-- kakaotalk图标 -->
                 <div id="kakaotalk-popup" class="popup">
-                    <img src="qita\kakaoba.png" style="width:100%">
+                    <img src="qita/kakaoba.png" style="width:100%">
                     <p>요지성</p>
                     <p>KakaoTalk</p>
                 </div>
             </div>
             <div class="sidebar-item" onmouseover="showPopup('Email-popup')" onmouseout="hidePopup('Email-popup')">
                 <div class="icon">
-                    <img src="tubiao\Email.png" style="width:100%">
+                    <img src="tubiao/Email.png" style="width:100%">
                 </div> <!-- Email图标 -->
                 <div id="Email-popup" class="popup">
                     <p>Email</p>
@@ -101,7 +112,7 @@
             </div>-->
             <div class="product-container">
                 <div class="product-item">
-                    <img src="chanpin\dongman.jpg" alt="dongman.jpg">
+                    <img src="chanpin/dongman.jpg" alt="dongman.jpg">
                     <div class="labels">
                         <span class="recommend">추천</span>
                         <span class="new">NEW</span>
@@ -111,7 +122,7 @@
                     <!--<p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>-->
                 </div>
                 <div class="product-item">
-                    <img src="chanpin\xianman.jpg" alt="xianman.jpg">
+                    <img src="chanpin/xianman.jpg" alt="xianman.jpg">
                     <div class="labels">
                         <span class="recommend">추천</span>
                         <span class="new">NEW</span>
@@ -121,7 +132,7 @@
                     <!--<p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>-->
                 </div>
                 <div class="product-item">
-                    <img src="chanpin\huoman.png" alt="huoman.jpg">
+                    <img src="chanpin/huoman.png" alt="huoman.jpg">
                     <div class="labels">
                         <span class="recommend">추천</span>
                         <span class="new">NEW</span>
@@ -131,7 +142,7 @@
                     <!--<p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>-->
                 </div>
                 <div class="product-item">
-                    <img src="chanpin\shengjiang.jpg" alt="dongman.jpg">
+                    <img src="chanpin/shengjiang.jpg" alt="dongman.jpg">
                     <div class="labels">
                         <span class="recommend">추천</span>
                         <span class="new">NEW</span>
@@ -155,8 +166,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js">
-
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
