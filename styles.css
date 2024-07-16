@@ -3,6 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%; /* 确保body宽度为100% */
+    box-sizing: border-box; /* 确保所有元素包括内边距和边框在内的总宽度 */
 }
 
 /* 电脑设备的样式 */
@@ -22,6 +24,7 @@ body.desktop header {
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    width: 100%;
 }
 
 body.desktop header .logo {
@@ -358,20 +361,6 @@ body.desktop footer {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 手机设备的样式 */
 body.mobile .daohanglan {
     display: flex;
@@ -380,6 +369,7 @@ body.mobile .daohanglan {
     padding: 5px 0; /* 减少填充 */
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 body.mobile header {
@@ -389,6 +379,8 @@ body.mobile header {
     justify-content: center;
     align-items: center;
     padding: 5px 0; /* 减少填充 */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 body.mobile header .logo {
@@ -432,8 +424,9 @@ body.mobile header nav ul li a {
 body.mobile .slideshow-container {
     position: relative;
     max-width: 100%;
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 body.mobile .mySlides {
@@ -442,8 +435,8 @@ body.mobile .mySlides {
 }
 
 body.mobile .mySlides img {
-    vertical-align: middle;
     width: 100%;
+    display: block;
 }
 
 /* 主页横幅上一张下一张按钮 */
@@ -541,6 +534,7 @@ body.mobile .sidebar {
     z-index: 1000;
     width: 30px; /* 减小宽度 */
     height: auto; /* 自动高度 */
+    box-sizing: border-box;
 }
 
 /* 调整侧边栏内部元素的样式 */
@@ -729,18 +723,6 @@ body.mobile footer {
     bottom: 0;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* test */
 .daohanglan {
