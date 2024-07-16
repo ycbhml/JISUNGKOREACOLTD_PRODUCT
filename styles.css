@@ -335,9 +335,15 @@ body.mobile .sidebar {
     right: 0; /* 设置右边距离为0 */
     transform: translateY(-50%); /* 垂直居中对齐 */
     background-color: #ffffff; /* 设置背景颜色为白色 */
-    padding: 10px; /* 设置内边距为10px */
-    border-radius: 10px 0 0 10px; /* 设置边框圆角 */
+    padding: 5px; /* 设置内边距为5px */
+    border-radius: 5px 0 0 5px; /* 设置边框圆角 */
     z-index: 1000; /* 设置z-index为1000 */
+    width: 40px; /* 设置宽度为40px，缩小一些 */
+    /* 调整侧边栏内图片的样式，保证图片不变形 */
+}
+body.mobile .sidebar .icon img {
+    width: 30px; /* 设置图片宽度为30px */
+    height: auto; /* 自动设置图片高度，保持比例 */
 }
 
 body.mobile .sidebar-item {
