@@ -1,0 +1,489 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif; /* 设置全局字体为Arial，如果Arial不可用则使用sans-serif */
+    width: 100%; /* 确保body宽度为100% */
+}
+
+/* 电脑设备的样式 */
+body.desktop .daohanglan {
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    width: auto; /* 设置导航栏宽度为100% */
+}
+
+/* 幻灯片样式 */
+body.desktop .slideshow-container {
+    position: relative; /* 设置相对定位 */
+    width: 100%; /* 设置最大宽度为100% */
+    margin: auto; /* 自动设置外边距，使容器居中 */
+}
+
+body.desktop .mySlides {
+    display: none; /* 隐藏所有幻灯片 */
+    width: 100%; /* 设置宽度为100% */
+}
+
+/* 主页横幅上一张下一张按钮 */
+body.desktop .prev,
+body.desktop .next {
+    cursor: pointer; /* 鼠标指针变为手型 */
+    position: absolute; /* 设置绝对定位 */
+    top: 50%; /* 设置顶部距离为50% */
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    width: auto; /* 自动设置宽度 */
+    padding: 16px; /* 设置内边距为16px */
+    color: white; /* 设置文字颜色为白色 */
+    font-weight: bold; /* 设置字体加粗 */
+    font-size: 18px; /* 设置字体大小为18px */
+    transition: 0.6s ease; /* 设置过渡效果 */
+    border-radius: 0 3px 3px 0; /* 设置边框圆角 */
+    user-select: none; /* 禁止用户选择文字 */
+}
+body.desktop .next {
+    right: 0; /* 设置右边距离为0 */
+    border-radius: 3px 0 0 3px; /* 设置边框圆角 */
+}
+body.desktop .prev {
+    left: 0; /* 设置左边距离为0 */
+    border-radius: 3px 0 0 3px; /* 设置边框圆角 */
+}
+/* 悬停时，添加带有一点透明的黑色背景色 */
+body.desktop .prev:hover,
+body.desktop .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* 设置背景色为黑色且透明度为0.8 */
+}
+/* 点和圆 */
+body.desktop .dots-container {
+    position: absolute; /* 设置绝对定位 */
+    bottom: 15px; /* 设置底部距离为15px */
+    width: 100%; /* 设置宽度为100% */
+    text-align: center; /* 设置文字居中对齐 */
+}
+body.desktop .dot {
+    cursor: pointer; /* 鼠标指针变为手型 */
+    height: 15px; /* 设置高度为15px */
+    width: 15px; /* 设置宽度为15px */
+    margin: 0 2px; /* 设置外边距 */
+    background-color: #bbb; /* 设置背景色 */
+    border-radius: 50%; /* 设置边框圆角 */
+    display: inline-block; /* 设置为内联块元素 */
+    transition: background-color 0.6s ease; /* 设置背景色过渡效果 */
+}
+body.desktop .active,
+body.desktop .dot:hover {
+    background-color: #717171; /* 设置激活和悬停时的背景色 */
+}
+/* 淡入淡出动画 */
+body.desktop .fade {
+    -webkit-animation-name: fade; /* 设置Webkit浏览器的动画名称 */
+    -webkit-animation-duration: 1.5s; /* 设置Webkit浏览器的动画持续时间 */
+    animation-name: fade; /* 设置动画名称 */
+    animation-duration: 1.5s; /* 设置动画持续时间 */
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4; /* 设置初始透明度 */
+    }
+    to {
+        opacity: 1; /* 设置结束透明度 */
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4; /* 设置初始透明度 */
+    }
+    to {
+        opacity: 1; /* 设置结束透明度 */
+    }
+}
+
+/* 侧边栏 */
+body.desktop .sidebar {
+    position: fixed; /* 设置固定定位 */
+    top: 50%; /* 设置顶部距离为50% */
+    right: 0; /* 设置右边距离为0 */
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    padding: 10px; /* 设置内边距为10px */
+    border-radius: 10px 0 0 10px; /* 设置边框圆角 */
+    z-index: 1000; /* 设置z-index为1000 */
+}
+
+body.desktop .sidebar-item {
+    position: relative; /* 设置相对定位 */
+    padding: 10px; /* 设置内边距为10px */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 设置主轴方向为垂直 */
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
+    text-align: center; /* 设置文字居中对齐 */
+}
+body.desktop .sidebar-item p {
+    margin: 0; /* 移除段落外边距 原来字行之间有间隔 添加这个之后就没了*/
+}
+body.desktop .icon {
+    font-size: 20px; /* 设置字体大小为20px */
+}
+body.desktop .popup {
+    display: none; /* 隐藏弹出框 */
+    position: absolute; /* 设置绝对定位 */
+    right: 100%; /* 设置右边距离为100% */
+    top: 50%; /* 设置顶部距离为50% */
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    padding: 10px; /* 设置内边距为10px */
+    border: 1px solid #ffffff; /* 设置边框颜色 */
+    border-radius: 5px; /* 设置边框圆角 */
+    white-space: nowrap; /* 设置不换行 */
+}
+body.desktop .sidebar-item:hover .popup {
+    display: block; /* 悬停时显示弹出框 */
+}
+body.desktop main .icon img {
+    height: 50px; /* 设置图标高度为50px */
+}
+
+
+/* 产品介绍 背景板 */
+body.desktop .product-container {
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 设置允许换行 */
+    justify-content: space-between; /* 设置主轴方向上的间距 */
+    width: 100%; /* 设置宽度为100% */
+    max-width: 1200px; /* 设置最大宽度为1200px */
+    margin: 0 auto; /* 自动设置外边距，使容器居中 */
+}
+
+body.desktop .product-item {
+    background-color: white; /* 设置背景颜色为白色 */
+    border: 1px solid #ddd; /* 设置边框颜色 */
+    border-radius: 5px; /* 设置边框圆角 */
+    padding: 20px; /* 设置内边距为20px */
+    width: calc(33.33% - 20px); /* 设置宽度 */
+    box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
+    margin-bottom: 20px; /* 设置底部外边距为20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+body.desktop .product-item img {
+    width: 100%; /* 设置图片宽度为100% */
+    height: auto; /* 自动设置图片高度 */
+    border-bottom: 1px solid #ddd; /* 设置图片底部边框颜色 */
+    padding-bottom: 15px; /* 设置底部内边距为15px */
+    margin-bottom: 15px; /* 设置底部外边距为15px */
+}
+
+body.desktop .labels {
+    margin-bottom: 10px; /* 设置底部外边距为10px */
+}
+
+body.desktop .labels .recommend,
+body.desktop .labels .new {
+    display: inline-block; /* 设置为内联块元素 */
+    padding: 5px 10px; /* 设置内边距 */
+    color: white; /* 设置文字颜色为白色 */
+    border-radius: 3px; /* 设置边框圆角 */
+    font-size: 12px; /* 设置字体大小为12px */
+    margin-right: 5px; /* 设置右边距为5px */
+}
+
+body.desktop .labels .recommend {
+    background-color: #f56342; /* 设置背景颜色 */
+}
+
+body.desktop .labels .new {
+    background-color: #ffcc00; /* 设置背景颜色 */
+}
+
+body.desktop .description {
+    font-size: 16px; /* 设置字体大小为16px */
+    color: #333; /* 设置文字颜色 */
+    margin: 10px 0; /* 设置上下外边距为10px */
+}
+
+body.desktop .price {
+    font-size: 20px; /* 设置字体大小为20px */
+    color: #e60012; /* 设置文字颜色 */
+    margin: 10px 0; /* 设置上下外边距为10px */
+    font-weight: bold; /* 设置字体加粗 */
+}
+
+body.desktop .shipping {
+    font-size: 14px; /* 设置字体大小为14px */
+    color: #666; /* 设置文字颜色 */
+    line-height: 1.5; /* 设置行高为1.5 */
+}
+
+/* 底部样式 */
+body.desktop footer {
+    background-color: #000000; /* 设置背景颜色为黑色 */
+    color: #fff; /* 设置文字颜色为白色 */
+    text-align: center; /* 设置文字居中对齐 */
+    padding: 10px 0; /* 设置上下内边距为10px */
+    position: relative; /* 设置相对定位 */
+    bottom: 0; /* 设置底部距离为0 */
+    width: 100%; /* 设置宽度为100% */
+}
+
+
+
+
+
+
+
+/* 手机设备的样式 */
+
+body.mobile .daohanglan {
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    width: auto; /* 设置导航栏宽度为100% */
+}
+
+/* 幻灯片样式 */
+body.mobile .slideshow-container {
+    position: relative; /* 设置相对定位 */
+    width: 100%; /* 设置最大宽度为100% */
+    margin: auto; /* 自动设置外边距，使容器居中 */
+}
+
+body.mobile .mySlides {
+    display: none; /* 隐藏所有幻灯片 */
+    width: 100%; /* 设置宽度为100% */
+}
+
+/* 主页横幅上一张下一张按钮 */
+body.mobile .prev,
+body.mobile .next {
+    cursor: pointer; /* 鼠标指针变为手型 */
+    position: absolute; /* 设置绝对定位 */
+    top: 50%; /* 设置顶部距离为50% */
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    width: auto; /* 自动设置宽度 */
+    padding: 16px; /* 设置内边距为16px */
+    color: white; /* 设置文字颜色为白色 */
+    font-weight: bold; /* 设置字体加粗 */
+    font-size: 18px; /* 设置字体大小为18px */
+    transition: 0.6s ease; /* 设置过渡效果 */
+    border-radius: 0 3px 3px 0; /* 设置边框圆角 */
+    user-select: none; /* 禁止用户选择文字 */
+}
+body.mobile .next {
+    right: 0; /* 设置右边距离为0 */
+    border-radius: 3px 0 0 3px; /* 设置边框圆角 */
+}
+body.mobile .prev {
+    left: 0; /* 设置左边距离为0 */
+    border-radius: 3px 0 0 3px; /* 设置边框圆角 */
+}
+/* 悬停时，添加带有一点透明的黑色背景色 */
+body.mobile .prev:hover,
+body.mobile .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* 设置背景色为黑色且透明度为0.8 */
+}
+/* 点和圆 */
+body.mobile .dots-container {
+    position: absolute; /* 设置绝对定位 */
+    bottom: 15px; /* 设置底部距离为15px */
+    width: 100%; /* 设置宽度为100% */
+    text-align: center; /* 设置文字居中对齐 */
+}
+body.mobile .dot {
+    cursor: pointer; /* 鼠标指针变为手型 */
+    height: 15px; /* 设置高度为15px */
+    width: 15px; /* 设置宽度为15px */
+    margin: 0 2px; /* 设置外边距 */
+    background-color: #bbb; /* 设置背景色 */
+    border-radius: 50%; /* 设置边框圆角 */
+    display: inline-block; /* 设置为内联块元素 */
+    transition: background-color 0.6s ease; /* 设置背景色过渡效果 */
+}
+body.mobile .active,
+body.mobile .dot:hover {
+    background-color: #717171; /* 设置激活和悬停时的背景色 */
+}
+/* 淡入淡出动画 */
+body.mobile .fade {
+    -webkit-animation-name: fade; /* 设置Webkit浏览器的动画名称 */
+    -webkit-animation-duration: 1.5s; /* 设置Webkit浏览器的动画持续时间 */
+    animation-name: fade; /* 设置动画名称 */
+    animation-duration: 1.5s; /* 设置动画持续时间 */
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4; /* 设置初始透明度 */
+    }
+    to {
+        opacity: 1; /* 设置结束透明度 */
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4; /* 设置初始透明度 */
+    }
+    to {
+        opacity: 1; /* 设置结束透明度 */
+    }
+}
+
+/* 侧边栏 */
+body.mobile .sidebar {
+    position: fixed; /* 设置固定定位 */
+    top: 50%; /* 设置顶部距离为50% */
+    right: 0; /* 设置右边距离为0 */
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    padding: 5px; /* 设置内边距为5px */
+    border-radius: 5px 0 0 5px; /* 设置边框圆角 */
+    z-index: 1000; /* 设置z-index为1000 */
+    width: 40px; /* 设置宽度为40px，缩小一些 */
+    /* 调整侧边栏内图片的样式，保证图片不变形 */
+}
+body.mobile .sidebar .icon img {
+    width: 30px; /* 设置图片宽度为30px */
+    height: auto; /* 自动设置图片高度，保持比例 */
+}
+
+body.mobile .sidebar-item {
+    position: relative; /* 设置相对定位 */
+    padding: 10px; /* 设置内边距为10px */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 设置主轴方向为垂直 */
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
+    text-align: center; /* 设置文字居中对齐 */
+}
+body.mobile .sidebar-item p {
+    margin: 0; /* 移除段落外边距 原来字行之间有间隔 添加这个之后就没了*/
+}
+body.mobile .icon {
+    font-size: 20px; /* 设置字体大小为20px */
+}
+body.mobile .popup {
+    display: none; /* 隐藏弹出框 */
+    position: absolute; /* 设置绝对定位 */
+    right: 100%; /* 设置右边距离为100% */
+    top: 50%; /* 设置顶部距离为50% */
+    transform: translateY(-50%); /* 垂直居中对齐 */
+    background-color: #ffffff; /* 设置背景颜色为白色 */
+    padding: 10px; /* 设置内边距为10px */
+    border: 1px solid #ffffff; /* 设置边框颜色 */
+    border-radius: 5px; /* 设置边框圆角 */
+    white-space: nowrap; /* 设置不换行 */
+}
+body.mobile .sidebar-item:hover .popup {
+    display: block; /* 悬停时显示弹出框 */
+}
+body.mobile main .icon img {
+    height: 50px; /* 设置图标高度为50px */
+}
+
+
+/* 产品介绍 背景板 */
+body.mobile .product-container {
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 设置允许换行 */
+    justify-content: space-between; /* 设置主轴方向上的间距 */
+    width: 100%; /* 设置宽度为100% */
+    max-width: 1200px; /* 设置最大宽度为1200px */
+    margin: 0 auto; /* 自动设置外边距，使容器居中 */
+}
+
+body.mobile .product-item {
+    background-color: white; /* 设置背景颜色为白色 */
+    border: 1px solid #ddd; /* 设置边框颜色 */
+    border-radius: 5px; /* 设置边框圆角 */
+    padding: 20px; /* 设置内边距为20px */
+    width: calc(50% - 20px); /* 设置宽度 */
+    box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
+    margin-bottom: 20px; /* 设置底部外边距为20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+body.mobile .product-item img {
+    width: 100%; /* 设置图片宽度为100% */
+    height: auto; /* 自动设置图片高度 */
+    border-bottom: 1px solid #ddd; /* 设置图片底部边框颜色 */
+    padding-bottom: 15px; /* 设置底部内边距为15px */
+    margin-bottom: 15px; /* 设置底部外边距为15px */
+}
+
+body.mobile .labels {
+    margin-bottom: 10px; /* 设置底部外边距为10px */
+}
+
+body.mobile .labels .recommend,
+body.mobile .labels .new {
+    display: inline-block; /* 设置为内联块元素 */
+    padding: 5px 10px; /* 设置内边距 */
+    color: white; /* 设置文字颜色为白色 */
+    border-radius: 3px; /* 设置边框圆角 */
+    font-size: 12px; /* 设置字体大小为12px */
+    margin-right: 5px; /* 设置右边距为5px */
+}
+
+body.mobile .labels .recommend {
+    background-color: #f56342; /* 设置背景颜色 */
+}
+
+body.mobile .labels .new {
+    background-color: #ffcc00; /* 设置背景颜色 */
+}
+
+body.mobile .description {
+    font-size: 16px; /* 设置字体大小为16px */
+    color: #333; /* 设置文字颜色 */
+    margin: 10px 0; /* 设置上下外边距为10px */
+}
+
+body.mobile .price {
+    font-size: 20px; /* 设置字体大小为20px */
+    color: #e60012; /* 设置文字颜色 */
+    margin: 10px 0; /* 设置上下外边距为10px */
+    font-weight: bold; /* 设置字体加粗 */
+}
+
+body.mobile .shipping {
+    font-size: 14px; /* 设置字体大小为14px */
+    color: #666; /* 设置文字颜色 */
+    line-height: 1.5; /* 设置行高为1.5 */
+}
+
+/* 底部样式 */
+body.mobile footer {
+    background-color: #000000; /* 设置背景颜色为黑色 */
+    color: #fff; /* 设置文字颜色为白色 */
+    text-align: center; /* 设置文字居中对齐 */
+    padding: 10px 0; /* 设置上下内边距为10px */
+    position: relative; /* 设置相对定位 */
+    bottom: 0; /* 设置底部距离为0 */
+    width: 100%; /* 设置宽度为100% */
+}
+
+
+
+
+
+/* 测试样式 */
+.slideshow-container {
+    border: 2px solid #ff0000; /* 设置边框颜色为蓝色 */
+}
+
+.dots-container {
+    border: 2px solid #ff0000; /* 设置边框颜色为青色 */
+}
+
+.sidebar {
+    border: 2px solid #00ff00; /* 设置边框颜色为紫色 */
+}
+
+.product-container {
+    border: 2px solid #0026ff; /* 设置边框颜色为深红色 */
+}
+
+.sidebar-item{
+    border: 2px solid #ff00bf; /* 设置边框颜色为浅青色 */
+}

@@ -10,6 +10,29 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add('desktop');
     }
 
+
+
+
+
+    // 为产品图片添加点击事件
+    document.getElementById("product-dongman").addEventListener("click", function() {
+        window.location.href = "dongman.html";
+    });
+    document.getElementById("product-xianman").addEventListener("click", function() {
+        window.location.href = "xianman.html";
+    });
+    document.getElementById("product-huoman").addEventListener("click", function() {
+        window.location.href = "huoman.html";
+    });
+    document.getElementById("product-shengjiang").addEventListener("click", function() {
+        window.location.href = "shengjiang.html";
+    });
+
+
+
+
+    
+
     let slideIndex = 1;
     showSlides(slideIndex);
 
