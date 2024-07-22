@@ -6,7 +6,6 @@
     <title>지성코리아—냉동장어소개</title>
     <link rel="icon" href="logo/logo7.png" type="image/png">
     <link rel="stylesheet" href="dongman_styles.css">
-    <!-- 添加Google Maps的API脚本 -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             function isMobileDevice() {
@@ -23,22 +22,7 @@
 </head>
 
 <body>
-    
-    <!-- 头部部分 -->
     <header>
-        <!--<div class="daohanglan">
-            <div class="logo">
-                <img src="logo/logo7.png" alt="zhichengkorea Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="sub01.php">지성코리아소개</a></li>    
-                    <li><a href="sub02.php">제품소개</a></li>
-                    <li><a href="sub04.php">연락처&주문</a></li>
-                    <li><a href="sub05.php">오시는 길</a></li>
-                </ul>
-            </nav>
-        </div>-->
     </header>
 
     <!-- 主内容部分 -->
@@ -46,13 +30,19 @@
         <!-- 横幅内容部分 -->
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="hengfu/z1.jpg" alt="xuanchaun1" style="width:100%">
+                <img src="hengfu/z1.png" alt="xuanchaun1" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="hengfu/z2.jpg" alt="xuanchaun2" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="hengfu/z3.jpg" alt="xuanchaun3" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z4.jpg" alt="xuanchaun4" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z5.jpg" alt="xuanchaun5" style="width:100%">
             </div>
             <!-- 上一个下一个按钮 -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -62,7 +52,9 @@
             <div class="dots-container">
                 <span class="dot" onclick="currentSlide(1)"></span> 
                 <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
 
@@ -99,23 +91,89 @@
             </div>
             <!-- 其他项目可以按照相同的结构添加 -->
         </div>
-
-        <!-- 公司内容介绍部分 -->
-        <!--<div class="introduce">
-            <p>지성코리아소개</p>
-        </div>-->
-        
         <!-- 产品介绍部分 -->
-        <div class="product-container">
+        <div class="chanpinjieshao">
+            <p class="chanpinming">자포니카 / 로스트라타 민물장어 냉동 필렛</p>
+            <p class="chanpinjieshao2">국립수산물검역소 식품의약품안전처FDA검사 국민 안심을 기준으로 수십가지 품목 검사를 맞이고  판매！</p>
+            <div class="wuyishantupianrongqi">
+                <img src="dongmansucai/wuyishan.png" alt="wuyishan.png">
+            </div>
+            <div class="wuyishantupianrongqi">
+                <img src="dongmansucai/manyuyangzhidi.jpg" alt="manyuyangzhidi.jpg">
+            </div>
+        
+
             <div class="product-item"id="product-dongman">
-                <img src="chanpin/dongman.jpg" alt="dongman.jpg">
-                <div class="labels">
+                <p class="renzheng">미국식품안전청(FDA)승인 해썹 인증! SGS 인증!</p>
+                <div class="renzheng-images">
+                    <img src="dongmansucai/renzheng1.png" alt="renzheng.png">
+                    <img src="dongmansucai/renzheng2.jpeg" alt="renzheng.jpeg">
+                    <img src="dongmansucai/renzheng3.png" alt="renzheng.png">
+                    <img src="dongmansucai/renzheng4.png" alt="renzheng.png">
+                </div>
+            </div>
+
+            <div class="product-item"id="product-dongman">
+                <p class="shiyanshi">시험실</p>
+                <p class="shiyanshijieshao">중국양식장에서 한국 식약청 통관기준 준수하여 사전검사 모습</p>
+
+                <img src="dongmansucai/shiyanshi.jpeg" alt="shiyanshi">
+                <p class="LCMS">LC-MS</p>
+                <img src="dongmansucai/image10.png" alt="LCMS">
+                <!-- <div class="labels">
                     <span class="recommend">추천</span>
                     <span class="new">NEW</span>
                 </div>
-                <p class="description">중국산 냉동장어  </p>
-                <!--<p class="price">27,900원</p>-->
-                <!--<p class="shipping">국내:해외배송 : 국내배송<br>배송비 : 4,000원<br>배송방법 : 택배</p>-->
+                <p class="description">중국산 냉동장어  </p>-->
+            </div>
+            <div class="product-item"id="product-dongman">
+                <p class="shayu">해썹인증 가공공장 에서 손질 / 개별 진공포장/급냉/냉동창고</p>
+                <img src="dongmansucai/image12.jpeg" alt="huomantong">
+                <img src="dongmansucai/image11.jpeg" alt="banyu">
+                <img src="dongmansucai/image13.png" alt="shayu">
+                <img src="dongmansucai/image8.png" alt="xinxianmanyubaozhuang">
+                <img src="dongmansucai/image14.png" alt="liushuixian">
+                <img src="dongmansucai/image16.jpeg" alt="cangku">
+            </div>
+            <div class="product-item"id="product-dongman">
+                <p class="pinze">한국 평택항으로  수입 된 민물장어 필렛</p>
+                <img src="dongmansucai/huoche1.jpeg" alt="huoche1">
+                <img src="dongmansucai/huoche2.jpeg" alt="huoche2">
+            </div>
+
+
+            <div class="product-item"id="product-dongman">
+                <p class="chanpinxinxi">제품명 : 냉동 뱀장어 필렛 (FROZEN EEL FILLETS)</p>
+                <p class="chanpinxinxi">원산지:중국</p>
+                <p class="chanpinxinxi">수입판매업소 : 지성코리아 주식회사</p>
+                <p class="chanpinxinxi">보관방법 : -18'C 이하 냉동보관</p>
+                <p class="chanpinxinxi">소비기한 : 포장일로부터 24개월 까지</p>
+                <p class="chanpinxinxi">성분 및 원재료 함량 : 뱀장어 100%</p>
+                <p class="chanpinxinxi">포장재질 : 외포장 아이스이박스, 내포장 LDPE</p>
+                <p class="chanpinxinxi">이미 냉동된 바 있으니 해동후 재냉동 하지 마십시오 본제품은 박스 단위로 판매하며 개별포장으로 판매하지 않습니다.</p>
+                <p class="chanpinxinxi">TEL:010-5053-2308</p>
+
+                
+                <p class="daxiao">사이즈：</p>
+                <p class="jieshao">박스/10키로그램/15마리/+-1마리</p>
+                <img src="dongmansucai/15phei.png" alt="15p">
+                <img src="dongmansucai/15p.jpeg" alt="15p">
+
+                <p class="jieshao">박스/10키로그램/20마리/+-1마리</p>
+                <img src="dongmansucai/20plan.jpeg" alt="20p">
+                <img src="dongmansucai/20p.jpeg" alt="20p">
+
+                <p class="jieshao">박스/10키로그램/25마리/+-1마리</p>
+                <img src="dongmansucai/25phong.jpeg" alt="25p">
+                <img src="dongmansucai/25p.jpeg" alt="25p">
+
+                <p class="jieshao">박스/10키로그램/30마리/+-1마리</p>
+                <img src="dongmansucai/30phui.jpeg" alt="30p">
+                <img src="dongmansucai/30p.jpeg" alt="30p">
+
+                <p class="jieshao">박스/10키로그램/35-40마리/+-1마리</p>
+                <img src="dongmansucai/35plv.jpeg" alt="35p">
+                <img src="dongmansucai/35p.jpeg" alt="35p">
             </div>
         </div>
     </main>
@@ -124,7 +182,7 @@
     <footer>
         <div class="dibu">
             <p>&copy; 2024지성코리아</p>
-            <p>법인명: 상호 | 대표자: 요지성 | 사업자 등록번호: 709-86-02846 </p>
+            <p>상호:지성코리아 | 대표자: 요지성 | 사업자 등록번호: 709-86-02846 </p>
             <p>전화: 010-5053-2308 | 팩스: 0504-383-2308 | 주소: 경기도 평택시 서동대로 422 신영보세창고B동</p>
             <p>개인정보관리책임자: 요지성(jisungkoreacoltd@hotmail.com) | Contact: jisungkoreacoltd@hotmail.com for more information</p>
             <p>Copyright © 지성코리아 All rights reserved</p>

@@ -147,7 +147,7 @@ body.desktop main .icon img {
 
 
 /* 产品介绍 背景板 */
-body.desktop .product-container {
+body.desktop .chanpinjieshao {
     display: flex; /* 使用flex布局 */
     flex-wrap: wrap; /* 设置允许换行 */
     justify-content: space-between; /* 设置主轴方向上的间距 */
@@ -156,17 +156,21 @@ body.desktop .product-container {
     margin: 0 auto; /* 自动设置外边距，使容器居中 */
 }
 
+/*product-item很重要的每个框的设置*/
 body.desktop .product-item {
-    background-color: white; /* 设置背景颜色为白色 */
-    border: 1px solid #ddd; /* 设置边框颜色 */
-    border-radius: 5px; /* 设置边框圆角 */
-    padding: 20px; /* 设置内边距为20px */
-    width: calc(33.33% - 20px); /* 设置宽度 */
-    box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
+    /*background-color: white;  设置背景颜色为白色 */
+    /*border: 1px solid #ddd; 设置边框颜色 */
+    /*border-radius: 5px;  设置边框圆角 */
+    /*padding: 20px;  设置内边距为20px */
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  设置阴影 */
+    width: 100%; /* 设置宽度 */
     margin-bottom: 20px; /* 设置底部外边距为20px */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 设置允许换行 */
+    justify-content: space-between; /* 设置主轴方向上的间距 */
+    margin: 0 auto; /* 自动设置外边距，使容器居中 */
 }
-
+/*product-item很重要的每个框的设置，图片不溢出边框的设置*/
 body.desktop .product-item img {
     width: 100%; /* 设置图片宽度为100% */
     height: auto; /* 自动设置图片高度 */
@@ -174,6 +178,70 @@ body.desktop .product-item img {
     padding-bottom: 15px; /* 设置底部内边距为15px */
     margin-bottom: 15px; /* 设置底部外边距为15px */
 }
+
+/* 标题头 */
+body.desktop .chanpinming {
+    font-size: 35px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    text-align: center; /* 居中对齐 */
+    margin: 20px auto 10px; /* 调整上下边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+body.desktop .chanpinjieshao {
+    font-size: 20px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    text-align: center; /* 居中对齐 */
+    margin: 10px auto 20px; /* 调整上下边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+/* 图片 */
+body.desktop .wuyishantupianrongqi {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中对齐 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+body.desktop .wuyishantupianrongqi img {
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+    height: auto; /* 保持图片比例 */
+}
+/* 认证字体 */
+body.desktop .renzheng {
+    font-size: 20px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    text-align: center; /* 居中对齐 */
+    margin: 20px auto; /* 添加上下边距 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+/* 认证图片 */
+body.desktop .renzheng {
+    text-align: center; /* 居中对齐 */
+    font-size: 24px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+
+body.desktop .renzheng-images {
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 50px; /* 图片之间的间隔 */
+    justify-content: center; /* 居中对齐 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+
+body.desktop .renzheng-images img {
+    flex: 1 1 calc(50% - 50px); /* 每张图片占据 50% 的宽度，减去间隔 */
+    max-width: calc(50% - 50px); /* 确保图片宽度适应容器 */
+    height: auto; /* 保持图片比例 */
+    box-sizing: border-box; /* 包括 padding 和 border 在宽度计算中 */
+}
+
+
+
+
+
 
 body.desktop .labels {
     margin-bottom: 10px; /* 设置底部外边距为10px */
@@ -383,7 +451,7 @@ body.mobile main .icon img {
 
 
 /* 产品介绍 背景板 */
-body.mobile .product-container {
+body.mobile .chanpinjieshao_tou {
     display: flex; /* 使用flex布局 */
     flex-wrap: wrap; /* 设置允许换行 */
     justify-content: space-between; /* 设置主轴方向上的间距 */
@@ -475,12 +543,14 @@ body.mobile footer {
 .dots-container {
     border: 2px solid #ff0000; /* 设置边框颜色为青色 */
 }
-
+.product-item{
+    border: 2px solid #0026ff; /* 设置边框颜色为深红色 */
+}
 .sidebar {
     border: 2px solid #00ff00; /* 设置边框颜色为紫色 */
 }
 
-.product-container {
+.chanpinjieshao {
     border: 2px solid #0026ff; /* 设置边框颜色为深红色 */
 }
 
