@@ -259,7 +259,6 @@ body.desktop .renzheng-images img {
     margin: 5px 0; /* 添加上下外边距 */
     padding: 0; /* 移除默认内边距 */
 }
-
 .jieshao {
     display: block;
     width: 100%;
@@ -267,7 +266,57 @@ body.desktop .renzheng-images img {
     margin: 5px 0;
     padding: 0;
 }
+/* 产品信息的大框 */
+body.desktop .chanpinkuang_big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 居中对齐每行的内容 */
+}
 
+/* 产品框 */
+body.desktop .chanpinkuang {
+    background-color: white; /* 设置背景颜色为白色 */
+    border: 1px solid #ddd; /* 设置边框颜色 */
+    border-radius: 5px; /* 设置边框圆角 */
+    padding: 20px; /* 设置内边距为20px */
+    width: calc(33.33% - 20px); /* 设置宽度 */
+    box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
+    margin-bottom: 20px; /* 设置底部外边距为20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+    margin: 10px; /* 设置每个元素之间的间隔 */
+}
+body.desktop .chanpinkuang img {
+    width: 100%; /* 设置图片宽度为100% */
+    height: auto; /* 自动设置图片高度 */
+    border-bottom: 1px solid #ddd; /* 设置图片底部边框颜色 */
+    padding-bottom: 15px; /* 设置底部内边距为15px */
+    margin-bottom: 15px; /* 设置底部外边距为15px */
+}
+/* 产品框里的小红黄标签 */
+body.desktop .labels {
+    margin-bottom: 10px; /* 设置底部外边距为10px */
+}
+body.desktop .labels .recommend,
+body.desktop .labels .new {
+    display: inline-block; /* 设置为内联块元素 */
+    padding: 5px 10px; /* 设置内边距 */
+    color: white; /* 设置文字颜色为白色 */
+    border-radius: 3px; /* 设置边框圆角 */
+    font-size: 12px; /* 设置字体大小为12px */
+    margin-right: 5px; /* 设置右边距为5px */
+}
+body.desktop .labels .recommend {
+    background-color: #f56342; /* 设置背景颜色 */
+}
+body.desktop .labels .new {
+    background-color: #ffcc00; /* 设置背景颜色 */
+}
+body.desktop .description {
+    font-size: 20px; /* 设置字体大小为20px */
+    color: #333; /* 设置文字颜色 */
+    margin: 10px 0; /* 设置上下外边距为10px */
+    text-align: center; /* 左对齐 */
+}
 body.desktop .labels {
     margin-bottom: 10px; /* 设置底部外边距为10px */
 }
@@ -401,15 +450,9 @@ body.mobile .sidebar {
     right: 0; /* 设置右边距离为0 */
     transform: translateY(-50%); /* 垂直居中对齐 */
     background-color: #ffffff; /* 设置背景颜色为白色 */
-    padding: 5px; /* 设置内边距为5px */
-    border-radius: 5px 0 0 5px; /* 设置边框圆角 */
+    padding: 10px; /* 设置内边距为10px */
+    border-radius: 10px 0 0 10px; /* 设置边框圆角 */
     z-index: 1000; /* 设置z-index为1000 */
-    width: 40px; /* 设置宽度为40px，缩小一些 */
-    /* 调整侧边栏内图片的样式，保证图片不变形 */
-}
-body.mobile .sidebar .icon img {
-    width: 30px; /* 设置图片宽度为30px */
-    height: auto; /* 自动设置图片高度，保持比例 */
 }
 
 body.mobile .sidebar-item {
@@ -449,34 +492,176 @@ body.mobile main .icon img {
 
 
 /* 产品介绍 背景板 */
-body.mobile .chanpinjieshao_tou {
-    display: flex; /* 使用flex布局 */
-    flex-wrap: wrap; /* 设置允许换行 */
-    justify-content: space-between; /* 设置主轴方向上的间距 */
-    width: 100%; /* 设置宽度为100% */
-    max-width: 1200px; /* 设置最大宽度为1200px */
+body.mobile .chanpinjieshao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 确保子元素水平居中 */
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto; /* 自动设置外边距，使容器居中 */
+    padding: 0 15px; /* 添加内边距，防止内容触及边框 */
 }
 
+/*product-item很重要的每个框的设置*/
 body.mobile .product-item {
-    background-color: white; /* 设置背景颜色为白色 */
-    border: 1px solid #ddd; /* 设置边框颜色 */
-    border-radius: 5px; /* 设置边框圆角 */
-    padding: 20px; /* 设置内边距为20px */
-    width: calc(50% - 20px); /* 设置宽度 */
-    box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
-    margin-bottom: 20px; /* 设置底部外边距为20px */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+    /*background-color: white;  设置背景颜色为白色 */
+    /*border: 1px solid #ddd; 设置边框颜色 */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* 自动设置外边距，使容器居中 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box; /* 确保 padding 包含在宽度内 */
 }
-
+/*product-item很重要的每个框的设置，图片不溢出边框的设置*/
 body.mobile .product-item img {
     width: 100%; /* 设置图片宽度为100% */
     height: auto; /* 自动设置图片高度 */
     border-bottom: 1px solid #ddd; /* 设置图片底部边框颜色 */
     padding-bottom: 15px; /* 设置底部内边距为15px */
     margin-bottom: 15px; /* 设置底部外边距为15px */
+    box-sizing: border-box; /* 确保 padding 包含在宽度内 */
 }
 
+/* 标题头 */
+body.mobile .chanpinming {
+    font-size: 40px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    text-align: center; /* 居中对齐 */
+    margin: 20px auto 10px; /* 调整上下边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+/* 产品介绍字体 大标题字体40仅一个 小标题字体30 介绍字体20*/
+body.mobile .chanpinjieshao {
+    font-size: 20px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    text-align: center; /* 居中对齐 */
+    margin: 10px auto 20px; /* 调整上下边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+/* 图片 */
+body.mobile .wuyishantupianrongqi {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中对齐 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+body.mobile .wuyishantupianrongqi img {
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+    height: auto; /* 保持图片比例 */
+}
+/* 小标题字体 */
+body.mobile .renzheng {
+    font-size: 30px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    text-align: center; /* 居中对齐 */
+    margin: 20px auto; /* 添加上下边距 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+/* 介绍字体 */
+body.mobile .chanpinjieshao2 {
+    text-align: center; /* 将文本居中 */
+    font-size: 20px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    margin: 10px auto; /* 添加上下外边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+}
+/* 认证图片 */
+body.mobile .renzheng {
+    text-align: center; /* 居中对齐 */
+    font-size: 24px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+
+body.mobile .renzheng-images {
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 50px; /* 图片之间的间隔 */
+    justify-content: center; /* 居中对齐 */
+    margin: 20px 0; /* 添加上下边距 */
+}
+
+body.mobile .renzheng-images img {
+    flex: 1 1 calc(50% - 50px); /* 每张图片占据 50% 的宽度，减去间隔 */
+    max-width: calc(50% - 50px); /* 确保图片宽度适应容器 */
+    height: auto; /* 保持图片比例 */
+    box-sizing: border-box; /* 包括 padding 和 border 在宽度计算中 */
+}
+
+/* 产品信息的介绍 */
+body.mobile.chanpinxinxi {
+    display: block; /* 确保每个 <p> 元素都是块级元素 */
+    width: 100%; /* 确保每个 <p> 元素占据父容器的全部宽度 */
+    text-align: left; /* 左对齐 */
+    margin: 5px 0; /* 添加上下外边距 */
+    padding: 0; /* 移除默认内边距 */
+}
+body.mobile.jieshao {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    padding: 0;
+}
+/* 产品信息的大框 */
+body.mobile .chanpinkuang_big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 居中对齐每行的内容 */
+}
+
+/* 产品框 */
+body.mobile .chanpinkuang {
+    background-color: white; /* 设置背景颜色为白色 */
+    border: 1px solid #ddd; /* 设置边框颜色 */
+    border-radius: 5px; /* 设置边框圆角 */
+    padding: 20px; /* 设置内边距为20px */
+    width: calc(33.33% - 20px); /* 设置宽度 */
+    box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
+    margin-bottom: 20px; /* 设置底部外边距为20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+    margin: 10px; /* 设置每个元素之间的间隔 */
+}
+body.mobile .chanpinkuang img {
+    width: 100%; /* 设置图片宽度为100% */
+    height: auto; /* 自动设置图片高度 */
+    border-bottom: 1px solid #ddd; /* 设置图片底部边框颜色 */
+    padding-bottom: 15px; /* 设置底部内边距为15px */
+    margin-bottom: 15px; /* 设置底部外边距为15px */
+}
+/* 产品框里的小红黄标签 */
+body.mobile .labels {
+    margin-bottom: 10px; /* 设置底部外边距为10px */
+}
+body.mobile .labels .recommend,
+body.mobile .labels .new {
+    display: inline-block; /* 设置为内联块元素 */
+    padding: 5px 10px; /* 设置内边距 */
+    color: white; /* 设置文字颜色为白色 */
+    border-radius: 3px; /* 设置边框圆角 */
+    font-size: 12px; /* 设置字体大小为12px */
+    margin-right: 5px; /* 设置右边距为5px */
+}
+body.mobile .labels .recommend {
+    background-color: #f56342; /* 设置背景颜色 */
+}
+body.mobile .labels .new {
+    background-color: #ffcc00; /* 设置背景颜色 */
+}
+body.mobile .description {
+    font-size: 20px; /* 设置字体大小为20px */
+    color: #333; /* 设置文字颜色 */
+    margin: 10px 0; /* 设置上下外边距为10px */
+    text-align: center; /* 左对齐 */
+}
 body.mobile .labels {
     margin-bottom: 10px; /* 设置底部外边距为10px */
 }
@@ -491,33 +676,6 @@ body.mobile .labels .new {
     margin-right: 5px; /* 设置右边距为5px */
 }
 
-body.mobile .labels .recommend {
-    background-color: #f56342; /* 设置背景颜色 */
-}
-
-body.mobile .labels .new {
-    background-color: #ffcc00; /* 设置背景颜色 */
-}
-
-body.mobile .description {
-    font-size: 16px; /* 设置字体大小为16px */
-    color: #333; /* 设置文字颜色 */
-    margin: 10px 0; /* 设置上下外边距为10px */
-}
-
-body.mobile .price {
-    font-size: 20px; /* 设置字体大小为20px */
-    color: #e60012; /* 设置文字颜色 */
-    margin: 10px 0; /* 设置上下外边距为10px */
-    font-weight: bold; /* 设置字体加粗 */
-}
-
-body.mobile .shipping {
-    font-size: 14px; /* 设置字体大小为14px */
-    color: #666; /* 设置文字颜色 */
-    line-height: 1.5; /* 设置行高为1.5 */
-}
-
 /* 底部样式 */
 body.mobile footer {
     background-color: #000000; /* 设置背景颜色为黑色 */
@@ -528,6 +686,7 @@ body.mobile footer {
     bottom: 0; /* 设置底部距离为0 */
     width: 100%; /* 设置宽度为100% */
 }
+
 
 
 
@@ -554,4 +713,7 @@ body.mobile footer {
 
 .sidebar-item{
     border: 2px solid #ff00bf; /* 设置边框颜色为浅青色 */
+}
+.chanpinkuang_big{
+    border: 2px solid #ff0000; /* 设置边框颜色为青色 */
 }
