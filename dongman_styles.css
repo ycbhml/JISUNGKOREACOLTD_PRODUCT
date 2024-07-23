@@ -145,17 +145,7 @@ body.desktop main .icon img {
     height: 50px; /* 设置图标高度为50px */
 }
 
-
-/* 产品介绍 背景板 */
-body.desktop .chanpinjieshao {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* 确保子元素水平居中 */
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; /* 自动设置外边距，使容器居中 */
-    padding: 0 15px; /* 添加内边距，防止内容触及边框 */
-}
+/* 产品介绍*/
 
 /*product-item很重要的每个框的设置*/
 body.desktop .product-item {
@@ -348,11 +338,6 @@ body.desktop footer {
 
 /* 手机设备的样式 */
 
-body.mobile .daohanglan {
-    align-items: center; /* 垂直居中对齐 */
-    justify-content: center; /* 水平居中对齐 */
-    width: auto; /* 设置导航栏宽度为100% */
-}
 
 /* 幻灯片样式 */
 body.mobile .slideshow-container {
@@ -495,17 +480,7 @@ body.mobile main .icon img {
 }
 
 
-/* 产品介绍 背景板 */
-body.mobile .chanpinjieshao {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* 确保子元素水平居中 */
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; /* 自动设置外边距，使容器居中 */
-    padding: 0 15px; /* 添加内边距，防止内容触及边框 */
-}
-
+/* 产品介绍*/
 /*product-item很重要的每个框的设置*/
 body.mobile .product-item {
     /*background-color: white;  设置背景颜色为白色 */
