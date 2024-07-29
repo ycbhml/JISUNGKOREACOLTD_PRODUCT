@@ -672,28 +672,27 @@ body.mobile footer {
 
 
 
-/* 测试样式 */
+/* 测试样式
 .slideshow-container {
-    border: 2px solid #ff0000; /* 设置边框颜色为蓝色 */
-}
+    border: 2px solid #ff0000; 
+} 
 
 .dots-container {
-    border: 2px solid #ff0000; /* 设置边框颜色为青色 */
+    border: 2px solid #ff0000; 
 }
 .product-item{
-    border: 2px solid #0026ff; /* 设置边框颜色为深红色 */
+    border: 2px solid #0026ff; 
 }
 .sidebar {
-    border: 2px solid #00ff00; /* 设置边框颜色为紫色 */
+    border: 2px solid #00ff00; 
 }
 
 .chanpinjieshao {
-    border: 2px solid #0026ff; /* 设置边框颜色为深红色 */
+    border: 2px solid #0026ff; 
 }
 
 .sidebar-item{
-    border: 2px solid #ff00bf; /* 设置边框颜色为浅青色 */
-}
+    border: 2px solid #ff00bf; 
 .chanpinkuang_big{
-    border: 2px solid #ff0000; /* 设置边框颜色为青色 */
-}
+    border: 2px solid #ff0000; 
+}*/
