@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("product-shengjiang").addEventListener("click", function() {
         window.location.href = "shengjiang.html";
     });
+    document.getElementById("product-kaoman").addEventListener("click", function() {
+        window.location.href = "kaoman.html";
+    });
 
 
 

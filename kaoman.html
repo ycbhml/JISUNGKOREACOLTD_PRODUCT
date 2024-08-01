@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지성코리아—양념장어소개</title>
+    <link rel="icon" href="logo/logo7.png" type="image/png">
+    <link rel="stylesheet" href="kaoman_styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function isMobileDevice() {
+                return (window.innerWidth <= 768);
+            }
+
+            if (isMobileDevice()) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <!-- 主内容部分 -->
+    <main>
+        <!-- 横幅内容部分 -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="hengfu/z1.png" alt="xuanchaun1" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z2.jpg" alt="xuanchaun2" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z3.jpg" alt="xuanchaun3" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z4.jpg" alt="xuanchaun4" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z5.jpg" alt="xuanchaun5" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="hengfu/z6.jpg" alt="xuanchaun5" style="width:100%">
+            </div>
+            <!-- 上一个下一个按钮 -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- 点和圆 -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+
+        <!-- 侧边栏联系内容部分 -->
+        <div class="sidebar">
+            <div class="sidebar-item" onmouseover="showPopup('phone-popup')" onmouseout="hidePopup('phone-popup')">
+                <div class="icon">
+                    <img src="tubiao/phone.png" style="width:100%">
+                </div> <!-- 电话图标 -->
+                <div id="phone-popup" class="popup">
+                    <p>phone number</p>
+                    <p>010-5053-2308</p>
+                    <p>오전8시~오후18시</p>
+                </div>
+            </div>
+            <div class="sidebar-item" onmouseover="showPopup('kakaotalk-popup')" onmouseout="hidePopup('kakaotalk-popup')">
+                <div class="icon">
+                    <img src="tubiao/kt.png" style="width:100%">
+                </div> <!-- kakaotalk图标 -->
+                <div id="kakaotalk-popup" class="popup">
+                    <img src="qita/kakaoba.png" style="width:100%">
+                    <p>요지성</p>
+                    <p>KakaoTalk</p>
+                </div>
+            </div>
+            <div class="sidebar-item" onmouseover="showPopup('Email-popup')" onmouseout="hidePopup('Email-popup')">
+                <div class="icon">
+                    <img src="tubiao/Email.png" style="width:100%">
+                </div> <!-- Email图标 -->
+                <div id="Email-popup" class="popup">
+                    <p>Email</p>
+                    <p>jisungkoreacoltd@hotmail.com</p>
+                </div>
+            </div>
+            <!-- 其他项目可以按照相同的结构添加 -->
+        </div>
+
+
+        
+        <!-- 产品介绍部分 -->
+        <div class="product-item">
+            <p class="chanpinming">자포니카 / 로스트라타 민물장어 냉동 양념장어</p>
+            <p class="chanpinjieshao2">국립수산물검역소 식품의약품안전처FDA검사 국민 안심을 기준으로 수십가지 품목 검사를 맞이고  판매！</p>
+            <div class="wuyishantupianrongqi">
+                <img src="dongmansucai/wuyishan.png" alt="wuyishan.png">
+            </div>
+            <div class="wuyishantupianrongqi">
+                <img src="dongmansucai/manyuyangzhidi.jpg" alt="manyuyangzhidi.jpg">
+            </div>
+            <div class="wuyishantupianrongqi">
+                <img src="kaomansucai/manyuyangzhidi3.jpg" alt="manyuyangzhidi.jpg">
+            </div>
+        </div>
+    
+        <div class="product-item">
+            <p class="renzheng">미국식품안전청(FDA)승인 해썹 인증! SGS 인증!</p>
+            <div class="renzheng-images">
+                <img src="dongmansucai/renzheng1.png" alt="renzheng.png">
+                <img src="dongmansucai/renzheng2.jpeg" alt="renzheng.jpeg">
+                <img src="dongmansucai/renzheng3.png" alt="renzheng.png">
+                <img src="dongmansucai/renzheng4.png" alt="renzheng.png">
+            </div>
+        </div>
+
+        <div class="product-item">
+            <p class="renzheng">시험실</p>
+            <p class="chanpinjieshao2">중국양식장에서 한국 식약청 통관기준 준수하여 사전검사 모습</p>
+
+            <img src="dongmansucai/shiyanshi.jpeg">
+            <p class="chanpinjieshao2">LC-MS</p>
+
+            <div class="renzheng-images">
+                <img src="dongmansucai/jiqi1.jpg">
+                <img src="dongmansucai/jiqi2.jpg">
+            </div>
+        </div>
+        <div class="product-item"id="">
+            <p class="renzheng">해썹인증 가공공장 에서 손질 / 개별 진공포장/급냉-35도까지</p>
+            <div class="renzheng-images">
+                <img src="dongmansucai/image12.jpeg">
+                <img src="dongmansucai/image11.jpeg">
+            </div>
+            <img src="dongmansucai/image13.png">
+            <div class="renzheng-images">
+                <img src="kaomansucai/kaoman1.jpg">
+                <img src="kaomansucai/kaoman2.jpg">
+            </div>
+            <img src="kaomansucai/liushuixian.jpeg">
+            <img src="kaomansucai/yangpin.png">
+            <img src="dongmansucai/image16.jpeg">
+
+        </div>
+        <div class="product-item">
+            <p class="renzheng">한국 평택항으로  수입 된 민물장어 냉동 양념장어</p>
+            <div class="renzheng-images">
+                <img src="kaomansucai/cangku1.jpeg">
+            <img src="kaomansucai/cangku2.png">
+            </div>
+        </div>
+
+
+        <div class="product-item">
+            <div class="chanpinkuang_big">
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/20.jpeg" alt="20p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/20마리/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/30.jpeg" alt="30p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/30마리/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/35.jpeg" alt="35p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/35마리/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/40.jpeg" alt="40p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/40마리/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/50.jpeg" alt="50p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/50마리/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/60.jpeg" alt="60p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/60p/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/80.jpeg" alt="80p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">박스/10키로그램/80p/+-1마리</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/gebie1.png" alt="p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">개별포장</p>
+                </div>
+
+                <div class="chanpinkuang">
+                    <img src="kaomansucai/gebie2.png" alt="p">
+                    <div class="labels">
+                        <span class="recommend">추천</span>
+                        <span class="new">NEW</span>
+                    </div>
+                    <p class="description">개별포장</p>
+                </div>
+            </div>
+            <p class="chanpinxinxi">제품명:민물장어 양념구이 (FROZEN ROASTED EEL)</p>
+            <p class="chanpinxinxi">원산지:중국</p>
+            <p class="chanpinxinxi">수입판매업소:지성코리아 주식회사</p>
+            <p class="chanpinxinxi">보관방법:냉동보관(-18도이하)</p>
+            <p class="chanpinxinxi">소비기한:제조일로부터24개월까지</p>
+            <p class="chanpinxinxi">성분 및 원재료 함량 : 뱀장어 80%, 양념20%</p>
+            <p class="chanpinxinxi">포장재질:외포장 아이스이박스, 내포장 LDPE</p>
+            <p class="chanpinxinxi">본제품은 박스 단위로 판매하며 개별포장으로 판매하지 않습니다.</p>
+            <p class="chanpinxinxi">TEL:010-5053-2308</p>
+
+        </div>
+    </main>
+
+    <!-- 底部部分 -->
+    <footer>
+        <div class="dibu">
+            <p>&copy; 2024지성코리아</p>
+            <p>상호:지성코리아 | 대표자: 요지성 | 사업자 등록번호: 709-86-02846 </p>
+            <p>전화: 010-5053-2308 | 팩스: 0504-383-2308 | 주소: 경기도 평택시 서동대로 422 신영보세창고B동</p>
+            <p>개인정보관리책임자: 요지성(jisungkoreacoltd@hotmail.com) | Contact: jisungkoreacoltd@hotmail.com for more information</p>
+            <p>Copyright © 지성코리아 All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="kaoman.script.js"></script>
+</body>
+</html>

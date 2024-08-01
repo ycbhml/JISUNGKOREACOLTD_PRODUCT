@@ -150,20 +150,19 @@ body.desktop main .icon img {
 body.desktop .product-container {
     display: flex; /* 使用flex布局 */
     flex-wrap: wrap; /* 设置允许换行 */
-    justify-content: space-between; /* 设置主轴方向上的间距 */
+    justify-content: center; /* 设置主轴方向上的间距为居中 */
     width: 100%; /* 设置宽度为100% */
     max-width: 1200px; /* 设置最大宽度为1200px */
     margin: 0 auto; /* 自动设置外边距，使容器居中 */
 }
-
 body.desktop .product-item {
     background-color: white; /* 设置背景颜色为白色 */
     border: 1px solid #ddd; /* 设置边框颜色 */
     border-radius: 5px; /* 设置边框圆角 */
     padding: 20px; /* 设置内边距为20px */
-    width: calc(33.33% - 20px); /* 设置宽度 */
+    width: calc(33.33% - 40px); /* 设置宽度 */
     box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
-    margin-bottom: 20px; /* 设置底部外边距为20px */
+    margin: 10px 20px; /* 设置左右外边距为20px，底部外边距为10px */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
 }
 
