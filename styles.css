@@ -385,7 +385,7 @@ body.mobile main .icon img {
 body.mobile .product-container {
     display: flex; /* 使用flex布局 */
     flex-wrap: wrap; /* 设置允许换行 */
-    justify-content: space-between; /* 设置主轴方向上的间距 */
+    justify-content: center; /* 设置主轴方向上的间距为居中 */
     width: 100%; /* 设置宽度为100% */
     max-width: 1200px; /* 设置最大宽度为1200px */
     margin: 0 auto; /* 自动设置外边距，使容器居中 */
@@ -398,7 +398,7 @@ body.mobile .product-item {
     padding: 20px; /* 设置内边距为20px */
     width: calc(50% - 20px); /* 设置宽度 */
     box-sizing: border-box; /* 确保填充和边框在内的总宽度 */
-    margin-bottom: 20px; /* 设置底部外边距为20px */
+    margin: 10px; /* 设置外边距 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
 }
 
@@ -409,7 +409,6 @@ body.mobile .product-item img {
     padding-bottom: 15px; /* 设置底部内边距为15px */
     margin-bottom: 15px; /* 设置底部外边距为15px */
 }
-
 body.mobile .labels {
     margin-bottom: 10px; /* 设置底部外边距为10px */
 }
