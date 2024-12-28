@@ -218,6 +218,17 @@ body.desktop .renzheng {
     display: block; /* 确保段落是块级元素 */
     width: 100%; /* 设置宽度为100% */
 }
+/* 介绍字体(药监局那句话) */
+.chanpinjieshao22 {
+    text-align: center; /* 将文本居中 */
+    font-size: 25px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    font-style: italic; /* 使字体变斜 */
+    margin: 10px auto; /* 添加上下外边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+    color: red; /* 设置字体颜色为红色 */
+}
 /* 认证图片 */
 body.desktop .renzheng {
     text-align: center; /* 居中对齐 */
@@ -551,6 +562,17 @@ body.mobile .chanpinjieshao2 {
     margin: 10px auto; /* 添加上下外边距，使其更紧凑 */
     display: block; /* 确保段落是块级元素 */
     width: 100%; /* 设置宽度为100% */
+}
+/* 介绍字体 监管局那句话 */
+body.mobile .chanpinjieshao22 {
+    text-align: center; /* 将文本居中 */
+    font-size: 20px; /* 放大字体 */
+    font-weight: bold; /* 加粗字体 */
+    margin: 10px auto; /* 添加上下外边距，使其更紧凑 */
+    display: block; /* 确保段落是块级元素 */
+    width: 100%; /* 设置宽度为100% */
+    font-style: italic; /* 使字体变斜 */
+    color: red; /* 设置字体颜色为红色 */
 }
 /* 认证图片 */
 body.mobile .renzheng {
