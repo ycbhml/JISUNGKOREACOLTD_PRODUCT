@@ -252,6 +252,24 @@ body.desktop .renzheng-images img {
     box-sizing: border-box; /* 包括 padding 和 border 在宽度计算中 */
 }
 
+/* 唯一的视频  设置视频容器 */
+.video-container {
+    display: flex;              /* 使用flexbox布局 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;        /* 垂直居中 */
+    width: 100%;                /* 容器宽度自适应 */
+    height: 100vh;              /* 容器高度为视口高度 */
+    background-color: #000;     /* 可选：设置背景色 */
+}
+
+/* 设置视频样式 */
+video {
+    width: 100%;                /* 视频宽度自适应容器 */
+    height: 100%;               /* 视频高度自适应容器 */
+    object-fit: cover;          /* 保持视频比例，同时填充容器，可能裁剪视频 */
+}
+
+
 /* 产品信息的介绍 */
 .chanpinxinxi {
     display: block; /* 确保每个 <p> 元素都是块级元素 */
@@ -595,6 +613,25 @@ body.mobile .renzheng-images img {
     max-width: calc(50% - 50px); /* 确保图片宽度适应容器 */
     height: auto; /* 保持图片比例 */
     box-sizing: border-box; /* 包括 padding 和 border 在宽度计算中 */
+}
+
+
+
+/* 唯一的视频  设置视频容器 */
+body.mobile.video-container {
+    display: flex;              /* 使用flexbox布局 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;        /* 垂直居中 */
+    width: 100%;                /* 容器宽度自适应 */
+    height: 100vh;              /* 容器高度为视口高度 */
+    background-color: #000;     /* 可选：设置背景色 */
+}
+
+/* 设置视频样式 */
+body.mobile.video {
+    width: 100%;                /* 视频宽度自适应容器 */
+    height: 100%;               /* 视频高度自适应容器 */
+    object-fit: cover;          /* 保持视频比例，同时填充容器，可能裁剪视频 */
 }
 
 /* 产品信息的介绍 */
