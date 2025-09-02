@@ -1,0 +1,467 @@
+/* 页眉整体区域样式开始 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* 导航栏滚动丝滑 */
+html {
+    scroll-behavior: smooth;
+}
+/* 导航栏 */
+.site-header {
+    background: white;
+    padding: 35px 0;
+    position: relative;  /* 不再悬浮 */
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 内容容器样式，用于让 header 居中且有左右留白 */
+.DaoHang {
+    max-width: 1200px;                      /* 设置最大宽度为1200px */
+    margin: 0 auto;                         /* 上下 margin 为0，左右自动居中 */
+    padding: 0 20px;                        /* 左右内边距20px，防止内容贴边 */
+    display: flex;                          /* 使用 Flexbox 布局 */
+    justify-content: space-between;        /* 左右两端对齐 */
+    align-items: center;                   /* 垂直方向居中对齐 */
+}
+
+/* Logo 区域样式 */
+.logo-JiSungKorea {
+    display: flex;                          /* 使用 Flexbox 布局，方便水平排列 logo 与文字 */
+    align-items: center;                   /* 垂直居中对齐 */
+    margin-left: -30px;                    /* ✅ 左边往外挤一点点（负值） */
+}
+
+/* logo 图片样式 */
+.logo-img {
+    width: 55px;                            /* 设置宽度为55像素 */
+    height: auto;                           /* 高度自适应，按比例缩放 */
+    margin-right: 15px;                    /* logo 与文字之间的间距为15px */
+}
+
+/* 公司名称文字样式 */
+.Gongsi_name {
+    font-size: 1.8rem;   /* ✅ 字体变大，整体协调 */
+    font-weight: bold;
+    color: #333;                           /* 字体颜色为深灰色 */
+}
+
+/* 导航菜单 ul 样式 */
+.Biaoqian ul {
+    display: flex;                          /* 使用 Flexbox 水平排列菜单项 */
+    list-style: none;                      /* 去除默认的列表圆点 */
+    margin: 0;                              /* 去除默认外边距 */
+    padding: 0;                             /* 去除默认内边距 */
+}
+
+/* 每个导航菜单项 li 的样式 */
+.Biaoqian li {
+    margin-left: 150px;                     /* 左边间距为150px，使菜单项之间有间隔 */
+}
+
+/* 导航链接样式 */
+.Biaoqian a {
+    text-decoration: none;                 /* 去掉超链接的下划线 */
+    color: #333;                            /* 文字颜色为深灰色 */
+    font-weight: 500;                      /* 字体稍微加粗 */
+    transition: color 0.3s;                /* 鼠标悬停时颜色渐变动画持续0.3秒 */
+    font-size: 25px;           /* ✅ 设置字体大小为 20 像素（你可以改成任意数值） */
+}
+
+/* 鼠标悬停时的链接颜色 */
+.Biaoqian a:hover {
+    color: #007bff;                        /* 鼠标悬停时字体颜色变为蓝色 */
+}
+
+
+
+/* 导航栏的문의하기弹窗控制 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 导航栏的문의하기2级菜单弹窗控制 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* 图标包裹容器 */
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 提示气泡初始隐藏 */
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 110%; /* 在图片上方弹出 */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 100;
+  transition: opacity 0.3s;
+}
+
+/* 悬停时显示气泡 */
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 二维码图片尺寸控制 */
+.tooltip img.qr-image {
+  width: 120px;
+  height: 120px;
+}
+
+
+
+
+
+
+/* 第二部分幻灯片开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.second-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.second-slide-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.second-slide {
+    width: 100%;
+    transition: transform 0.6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-slide img.second-img {
+    width: 100%;
+    height: auto;  /* ✅ 高度自适应，不拉伸 */
+    display: block;
+    object-fit: contain; /* 可写可不写，这里主要靠宽度自动适应 */
+}
+
+.second-slide.current {
+    position: relative;
+    z-index: 1;
+    transform: translateX(0%);
+}
+.second-slide.next {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+}
+
+/* 小按钮 */
+.second-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s; /* ✅ 调到0.3秒更自然 */
+}
+.indicator-btn:hover,
+.indicator-btn:focus,
+.indicator-btn:active {
+    background-color: #000; /* ✅ 黑底 */
+    color: #fff; /* ✅ 白字 */
+    outline: none; /* 去掉黑圈 */
+    box-shadow: none; /* 去掉按下的阴影 */
+}
+.indicator-btn.active {
+    background-color: #000000; /* 高亮时是蓝色 */
+    color: white;
+}
+
+/* 底部开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+footer {
+    background-color: #111; /* 深灰接近黑色背景 */
+    padding: 40px 20px;     /* 上下左右留白 */
+    color: #ffffff;            /* 浅灰色字体，柔和 */
+    font-size: 14px;        /* 字体大小适中 */
+}
+
+.dibu {
+    max-width: 1200px;      /* 最大宽度 */
+    margin: 0 auto;         /* 居中对齐 */
+    text-align: center;     /* 所有文字居中 */
+    line-height: 1.8;       /* 行距舒适 */
+}
+
+.dibu p {
+    margin: 5px 0;          /* 每行上下间距 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 手机端------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1400px) {
+  /* 导航栏 */
+  .site-header {
+    padding: 15px 0;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .DaoHang {
+  flex-direction: column;
+  align-items: center;           /* ✅ 水平居中！ */
+  width: 100%;
+  max-width: 100% !important;
+  padding: 0 12px;
+  box-sizing: border-box;
+  }
+
+  .logo-JiSungKorea {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .Gongsi_name {
+    font-size: 1.5rem;
+  }
+
+  .Biaoqian ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;    /* ✅ 四项间隔自动撑满，左右均衡 */
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 6vw;                          /* ✅ 每项之间加入自适应间距 */
+  }
+
+  .Biaoqian li {
+    flex: 1 1 0%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .Biaoqian a {
+    display: block;
+    padding: 10px 5px;
+    font-size: clamp(12px, 3.5vw, 16px);
+    word-break: keep-all;
+  }
+  /* 导航栏的문의하기弹窗控制 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+
+  .icon-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+  }
+
+  .contact-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .tooltip {
+    font-size: 15px;   /* ✅ 原来默认大约是14~16px，现在变小一点 */
+    line-height: 1.4;  /* ✅ 让多行内容更紧凑但仍可读 */
+  }
+
+  /* 导航栏的문의하기2级菜单弹窗控制 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  /* 图标包裹容器 */
+  .icon-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* 提示气泡初始隐藏 */
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 110%; /* 在图片上方弹出 */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 100;
+    transition: opacity 0.3s;
+  }
+
+  /* 悬停时显示气泡 */
+  .icon-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* 二维码图片尺寸控制 */
+  .tooltip img.qr-image {
+    width: 150px;
+    height: 150px;
+  }
+
+
+  
+
+  /* 幻灯片和底部调用pc---------------------------------------------------------------------------------------------------------------------*/
+}
