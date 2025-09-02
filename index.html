@@ -64,51 +64,120 @@
 
 <body>
     <!-- 头部部分 -->
-        <header class="site-header"><!-- 头 -->
-            <div class="DaoHang"><!-- 导航栏 -->
-                <div class="logo-JiSungKorea"><!-- 导航栏左边 -->
-                    <img src="logo/logo.png" alt="지성코리아 로고" class="logo-img">
-                    <span class="Gongsi_name">지성코리아</span>
-                </div>
-
-                <nav class="Biaoqian"><!-- 导航栏右边 -->
-                    <ul>
-                        <li><a href="https://jisungkoreacoltd.com/">우리회사</a></li>
-                        <li><a href="https://jisungkoreacoltd.com/product.html">구매하기</a></li>
-                        <li><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">제품소개</a></li>
-                        <li><a href="#" id="contactTrigger">문의하기</a></li>
-                    </ul>
-                </nav>
+    <header class="site-header"><!-- 头 -->
+        <div class="DaoHang"><!-- 导航栏 -->
+            <div class="logo-JiSungKorea"><!-- 导航栏左边 -->
+                <img src="logo/logo.png" alt="지성코리아 로고" class="logo-img">
+                <span class="Gongsi_name">지성코리아</span>
             </div>
-        </header>
 
-        <!-- 문의하기弹窗结构 -->
-        <div id="contactModal" class="modal">
-          <div class="modal-content">
-            <span class="close-button">&times;</span>
+            <nav class="Biaoqian"><!-- 导航栏右边 -->
+                <ul>
+                    <li><a href="https://jisungkoreacoltd.com/">우리회사</a></li>
+                    <li><a href="https://jisungkoreacoltd.com/product.html">구매하기</a></li>
+                    <li><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">제품소개</a></li>
+                    <li><a href="#" id="contactTrigger">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 문의하기弹窗结构 -->
+    <div id="contactModal" class="modal">
+       <div class="modal-content">
+        <span class="close-button">&times;</span>
           
-            <div class="icon-row">
-              <div class="icon-wrapper">
-                <img src="Header/phone.png" alt="전화" class="contact-icon">
-                <div class="tooltip">전화번호: 010-5053-2308<br>영업시간: 오전8시~오후18시</div>
-              </div>
+         <div class="icon-row">
+          <div class="icon-wrapper">
+            <img src="Header/phone.png" alt="전화" class="contact-icon">
+            <div class="tooltip">전화번호: 010-5053-2308<br>영업시간: 오전8시~오후18시</div>
+          </div>
           
-              <div class="icon-wrapper">
-                <img src="Header/Email.png" alt="이메일" class="contact-icon">
-                <div class="tooltip">이메일: jisungkoreacoltd@hotmail.com</div>
-              </div>
+          <div class="icon-wrapper">
+            <img src="Header/Email.png" alt="이메일" class="contact-icon">
+            <div class="tooltip">이메일: jisungkoreacoltd@hotmail.com</div>
+          </div>
           
-              <div class="icon-wrapper">
-                <img src="Header/kt.png" alt="카카오톡" class="contact-icon">
-                <div class="tooltip">
-                  <img src="Header/kakaoba.png" alt="카카오톡 QR" class="qr-image">
-                  <img src="Header/kakaoma.jpg" alt="카카오톡 QR" class="qr-image">
-                </div>
-              </div>
+          <div class="icon-wrapper">
+            <img src="Header/kt.png" alt="카카오톡" class="contact-icon">
+            <div class="tooltip">
+              <img src="Header/kakaoba.png" alt="카카오톡 QR" class="qr-image">
+              <img src="Header/kakaoma.jpg" alt="카카오톡 QR" class="qr-image">
             </div>
           </div>
         </div>
-        
+      </div>
+    </div>
+
+
+
+    <section class="product-card">
+      <!-- 左侧：大图 + 缩略图 -->
+      <div class="product-images">
+        <div class="main-image">
+          <img src="Product/蒲烧鳗鱼主图.jpg" alt="상품1">
+        </div>
+
+        <div class="thumbs">
+          <img src="Product/蒲烧鳗鱼1.png" alt="thumb1">
+          <img src="Product/蒲烧鳗鱼2.png" alt="thumb2">
+          <img src="Product/蒲烧鳗鱼3.png" alt="thumb3">
+          <img src="Product/蒲烧鳗鱼4.png" alt="thumb4">
+          <img src="Product/蒲烧鳗鱼5.png" alt="thumb5">
+          <img src="Product/蒲烧鳗鱼6.png" alt="thumb6">
+          <img src="Product/蒲烧鳗鱼7.png" alt="thumb7">
+          <img src="Product/蒲烧鳗鱼8.png" alt="thumb8">
+        </div>
+      </div>
+
+      <!-- 右侧：信息 -->
+      <div class="product-info">
+        <h2 class="product-name">蒲烧鳗鱼</h2>
+        <p class="product-spec">规格：500g / 1kg</p>
+        <p class="product-price">₩10,000 ~ ₩18,000</p>
+        <p class="product-desc">이 상품은 신선한 재료로 제작되어 내구성이 뛰어나며, 일상 사용에 적합합니다.</p>
+      </div>
+    </section>
+
+    <section class="product-card">
+      <!-- 左侧：大图 + 缩略图 -->
+      <div class="product-images">
+        <div class="main-image">
+          <img src="Product/冻鳗主图.jpg" alt="상품1">
+        </div>
+
+        <div class="thumbs">
+          <img src="Product/蒲烧鳗鱼1.png" alt="thumb1">
+          <img src="Product/蒲烧鳗鱼2.png" alt="thumb2">
+          <img src="Product/蒲烧鳗鱼3.png" alt="thumb3">
+          <img src="Product/蒲烧鳗鱼4.png" alt="thumb4">
+          <img src="Product/蒲烧鳗鱼5.png" alt="thumb5">
+          <img src="Product/蒲烧鳗鱼6.png" alt="thumb6">
+          <img src="Product/蒲烧鳗鱼7.png" alt="thumb7">
+          <img src="Product/蒲烧鳗鱼8.png" alt="thumb8">
+        </div>
+      </div>
+
+      <!-- 右侧：信息 -->
+      <div class="product-info">
+        <h2 class="product-name">冻鳗鱼</h2>
+        <p class="product-spec">规格：500g / 1kg</p>
+        <p class="product-price">₩10,000 ~ ₩18,000</p>
+        <p class="product-desc">이 상품은 신선한 재료로 제작되어 내구성이 뛰어나며, 일상 사용에 적합합니다.</p>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- 缩略图放大框（全局只有一个即可） -->
+      <div id="previewBox">
+        <img id="previewImg" src="" alt="预览">
+      </div>
+
+
     <!-- 第二部分幻灯片 -->
     <section class="second-slider">
         <div class="second-slide-wrapper">

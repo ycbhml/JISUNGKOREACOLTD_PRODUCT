@@ -112,3 +112,45 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 产品信息 + 图片放大预览
+document.addEventListener("DOMContentLoaded", () => {
+  const previewBox = document.getElementById("previewBox");
+  const previewImg = document.getElementById("previewImg");
+
+  document.querySelectorAll(".thumbs img").forEach(thumb => {
+    thumb.addEventListener("mouseenter", (e) => {
+      previewImg.src = thumb.src;
+      previewBox.style.display = "block";
+
+      // 初始定位：鼠标右上角（偏移 20px）
+      previewBox.style.left = e.pageX + 20 + "px";
+      previewBox.style.top = (e.pageY - 620) + "px"; // 上方 420px，可根据图片高度调整
+    });
+
+    thumb.addEventListener("mousemove", (e) => {
+      // 跟随鼠标移动
+      previewBox.style.left = e.pageX + 20 + "px";
+      previewBox.style.top = (e.pageY - 620) + "px";// 图片位置大小 跟随鼠标移动
+    });
+
+    thumb.addEventListener("mouseleave", () => {
+      previewBox.style.display = "none";
+    });
+  });
+});

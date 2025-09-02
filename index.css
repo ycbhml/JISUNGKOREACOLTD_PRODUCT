@@ -163,6 +163,110 @@ html {
 
 
 
+/* 商品介绍部分开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 每个商品卡片 */
+.product-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 1200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  gap: 40px;
+}
+
+/* 左侧图片区 */
+.product-images {
+  flex: 1;
+  max-width: 50%;
+}
+
+.product-images .main-image img {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-images .thumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.product-images .thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product-images .thumbs img:hover {
+  transform: scale(1.05);
+  border-color: #999;
+}
+
+/* 右侧信息区 */
+.product-info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.product-info .product-name {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.product-info .product-spec {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-info .product-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c00;
+  margin-bottom: 15px;
+}
+
+.product-info .product-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+
+
+/* 放大框 */
+#previewBox {
+  position: absolute;
+  display: none;
+  border: 2px solid #333;
+  background: #fff;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+#previewBox img {
+  width: 600px;   /* 放大图大小，可调整 */
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
 /* 第二部分幻灯片开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 .second-slider {
     position: relative;
