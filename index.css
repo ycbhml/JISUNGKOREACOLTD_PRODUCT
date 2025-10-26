@@ -161,8 +161,6 @@ html {
 
 
 
-
-
 /* 商品介绍部分开始------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* 每个商品卡片 */
 .product-card {
@@ -239,6 +237,31 @@ html {
   font-size: 15px;
   line-height: 1.6;
   color: #555;
+}
+
+
+/* 规格+价格组合行 -----------------------------------------*/
+.product-spec-list {
+  display: flex;
+  flex-direction: column; /* 默认多行排列 */
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.spec-item {
+  display: flex;
+  justify-content: space-between; /* 规格左、价格右 */
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+  padding: 4px 0;
+}
+.spec-item .product-spec {
+  font-size: 16px;
+  color: #333;
+}
+.spec-item .product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #c00;
 }
 
 
