@@ -91,38 +91,34 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoPlay();
 });
 
-// 导航栏弹窗监听
+
+
+// 联系方式弹窗
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("contactModal");
   const trigger = document.getElementById("contactTrigger");
-  const closeBtn = document.querySelector(".close-button");
+  const closeBtn = document.querySelector(".contact-close-button");
 
-  trigger.addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.style.display = "flex";
-  });
+  if (trigger && modal && closeBtn) {
+    // 打开弹窗
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.classList.add("show");
+    });
 
-  closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
+    // 点击关闭按钮
+    closeBtn.addEventListener("click", function () {
+      modal.classList.remove("show");
+    });
 
-  window.addEventListener("click", function (e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+    // 点击遮罩关闭
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+  }
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
